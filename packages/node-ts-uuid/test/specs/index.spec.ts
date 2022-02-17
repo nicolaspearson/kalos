@@ -26,12 +26,6 @@ const networkInterfacesMock = {
   ],
 };
 
-// type Mock<T> = { [K in keyof T]?: jest.Mock<any> };
-// const osMock: Mock<{
-//   networkInterfaces(): NodeJS.Dict<os.NetworkInterfaceInfo[]>;
-// }> = jest.mock('os');
-// osMock.networkInterfaces = jest.fn(() => networkInterfacesMock);
-
 const osMock = {
   networkInterfaces: jest.fn(() => networkInterfacesMock),
 };
@@ -89,14 +83,6 @@ describe('Uuid Tests', () => {
             internal: false,
             cidr: 'fe80::1882:f8ec:3bc9:d49e/64',
             scopeid: 14,
-          } as unknown as os.NetworkInterfaceInfo,
-          {
-            address: ipAddressMock,
-            netmask: '255.255.255.0',
-            family: 'IPv4',
-            mac: undefined,
-            internal: false,
-            cidr: `${ipAddressMock}/24`,
           } as unknown as os.NetworkInterfaceInfo,
         ],
       };
