@@ -5,3 +5,6 @@
 .eslintrc.js
 commitlint.config.js
 jest.config.js
+
+# Auto-generated files
+packages/grpc-ts-health-check/src/proto/**/*.ts

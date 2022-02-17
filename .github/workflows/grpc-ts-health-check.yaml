@@ -1,0 +1,61 @@
+name: grpc-ts-health-check
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/grpc-ts-health-check.yaml
+      - packages/grpc-ts-health-check/**
+      - package.json
+      - tsconfig.json
+      - types/**/*.ts
+      - '!**.md'
+      - '!**/.gitignore'
+  pull_request:
+    paths:
+      - .github/workflows/grpc-ts-health-check.yaml
+      - packages/grpc-ts-health-check/**
+      - package.json
+      - tsconfig.json
+      - types/**/*.ts
+      - '!**.md'
+      - '!**/.gitignore'
+
+env:
+  PACKAGE: grpc-ts-health-check
+jobs:
+  test:
+    name: Build, Lint, and Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@master
+      - name: Using node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install yarn dependencies
+        run: yarn install --immutable
+      - name: Build package
+        run: yarn workspace $PACKAGE build
+      - name: Lint package
+        run: yarn workspace $PACKAGE lint
+      - name: Run package unit tests
+        run: yarn workspace $PACKAGE test:unit
+  draft-release:
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release draft
+        id: release-wizard
+        uses: darioblanco/release-wizard@main
+        with:
+          app: ${{ env.PACKAGE }}
+          draft: true
+          templatePath: release-wizard.md
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}

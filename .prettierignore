@@ -18,6 +18,10 @@
 .prettierignore
 .prettierrc
 .yarnrc.yml
+*.proto
 LICENSE
 package.json
 yarn.lock
+
+# Auto-generated files
+packages/grpc-ts-health-check/src/proto/**/*.ts

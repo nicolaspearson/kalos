@@ -27,6 +27,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/grpc-boom"
       },
       {
+        "name": "grpc-ts-health-check",
+        "reference": "workspace:packages/grpc-ts-health-check"
+      },
+      {
         "name": "heart-ping",
         "reference": "workspace:packages/heart-ping"
       },
@@ -38,7 +42,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["grpc-boom", ["workspace:packages/grpc-boom"]],
+      ["grpc-boom", ["virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom", "workspace:packages/grpc-boom"]],
+      ["grpc-ts-health-check", ["workspace:packages/grpc-ts-health-check"]],
       ["heart-ping", ["workspace:packages/heart-ping"]],
       ["kalos", ["workspace:."]],
       ["node-ts-uuid", ["workspace:packages/node-ts-uuid"]]
@@ -1673,6 +1678,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/babel__traverse", "npm:7.14.2"],
             ["@babel/types", "npm:7.17.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/google-protobuf", [
+        ["npm:3.15.5", {
+          "packageLocation": "./.yarn/cache/@types-google-protobuf-npm-3.15.5-2abce93017-43f52df3b5.zip/node_modules/@types/google-protobuf/",
+          "packageDependencies": [
+            ["@types/google-protobuf", "npm:3.15.5"]
           ],
           "linkType": "HARD",
         }]
@@ -4603,6 +4617,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["google-protobuf", [
+        ["npm:3.19.4", {
+          "packageLocation": "./.yarn/cache/google-protobuf-npm-3.19.4-78e4b2e88b-c0ebc0afbb.zip/node_modules/google-protobuf/",
+          "packageDependencies": [
+            ["google-protobuf", "npm:3.19.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["graceful-fs", [
         ["npm:4.2.9", {
           "packageLocation": "./.yarn/cache/graceful-fs-npm-4.2.9-ee48e00aaa-68ea4e07ff.zip/node_modules/graceful-fs/",
@@ -4613,6 +4636,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["grpc-boom", [
+        ["virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom", {
+          "packageLocation": "./.yarn/__virtual__/grpc-boom-virtual-4d115bfe21/1/packages/grpc-boom/",
+          "packageDependencies": [
+            ["grpc-boom", "virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom"],
+            ["@grpc/grpc-js", "npm:1.5.5"],
+            ["@types/jest", "npm:27.4.0"],
+            ["@types/node", "npm:16.11.25"],
+            ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],
+            ["kalos", "workspace:."],
+            ["protobufjs", "npm:6.11.2"],
+            ["rimraf", "npm:3.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+          ],
+          "packagePeers": [
+            "@types/node"
+          ],
+          "linkType": "SOFT",
+        }],
         ["workspace:packages/grpc-boom", {
           "packageLocation": "./packages/grpc-boom/",
           "packageDependencies": [
@@ -4620,6 +4661,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@grpc/grpc-js", "npm:1.5.5"],
             ["@types/jest", "npm:27.4.0"],
             ["@types/node", "npm:16.11.25"],
+            ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],
+            ["kalos", "workspace:."],
+            ["protobufjs", "npm:6.11.2"],
+            ["rimraf", "npm:3.0.2"],
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["grpc-ts-health-check", [
+        ["workspace:packages/grpc-ts-health-check", {
+          "packageLocation": "./packages/grpc-ts-health-check/",
+          "packageDependencies": [
+            ["grpc-ts-health-check", "workspace:packages/grpc-ts-health-check"],
+            ["@grpc/grpc-js", "npm:1.5.5"],
+            ["@grpc/proto-loader", "npm:0.6.9"],
+            ["@types/google-protobuf", "npm:3.15.5"],
+            ["@types/jest", "npm:27.4.0"],
+            ["@types/node", "npm:16.11.25"],
+            ["google-protobuf", "npm:3.19.4"],
+            ["grpc-boom", "virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom"],
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],
             ["kalos", "workspace:."],
             ["protobufjs", "npm:6.11.2"],
