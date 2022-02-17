@@ -6,11 +6,11 @@ on:
       - master
     paths:
       - '**.md'
-      - .github/workflows/markdown.yaml
+      - .github/workflows/markdown.yml
   pull_request:
     paths:
       - '**.md'
-      - .github/workflows/markdown.yaml
+      - .github/workflows/markdown.yml
   repository_dispatch:
     types:
       - markdown
@@ -25,4 +25,4 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@master
       - name: Lint markdown files
-        run: ' find . -type f \( -name "*.md" \) -print | while IFS="" read -r file; do /usr/bin/markdownlint -c markdownlint.yaml "$file"; done; '
+        run: ' find . -type f \( -name "*.md" \) -print | while IFS="" read -r file; do /usr/bin/markdownlint -c markdownlint.yml "$file"; done; '
