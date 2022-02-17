@@ -1,11 +1,11 @@
 import * as os from 'os';
 
-interface UuidOptions {
+export interface UuidOptions {
   length?: number;
   prefix?: string;
 }
 
-class Uuid {
+export class Uuid {
   private static lastTime: number;
 
   /**
@@ -132,5 +132,3 @@ class Uuid {
     return uuid;
   }
 }
-
-export { UuidOptions, Uuid };
