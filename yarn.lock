@@ -3470,14 +3470,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"grpc-boom@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "grpc-boom@npm:2.0.5"
-  checksum: a22ac1605327a630f981406cfb31115624abcf45ea8aa72e226516eb21fc575f7b2663479041d5310da1da6d70d4ea92e60bfa6324a5098c92021f94dab996ef
-  languageName: node
-  linkType: hard
-
-"grpc-boom@workspace:packages/grpc-boom":
+"grpc-boom@^3.0.9, grpc-boom@workspace:packages/grpc-boom":
   version: 0.0.0-use.local
   resolution: "grpc-boom@workspace:packages/grpc-boom"
   dependencies:
@@ -3504,7 +3497,7 @@ __metadata:
     "@types/jest": 27.4.0
     "@types/node": ^16.11.25
     google-protobuf: ^3.19.4
-    grpc-boom: ^2.0.5
+    grpc-boom: ^3.0.9
     jest: ^27.5.1
     kalos: "workspace:*"
     protobufjs: ^6.11.2

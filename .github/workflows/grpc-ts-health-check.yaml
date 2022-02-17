@@ -41,7 +41,7 @@ jobs:
       - name: Install yarn dependencies
         run: yarn install --immutable
       - name: Build package
-        run: yarn workspace $PACKAGE build
+        run: yarn workspace grpc-boom build && yarn workspace $PACKAGE build
       - name: Lint package
         run: yarn workspace $PACKAGE lint
       - name: Run package unit tests
