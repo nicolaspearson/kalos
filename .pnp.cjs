@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["grpc-boom", ["virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom", "workspace:packages/grpc-boom"]],
+      ["grpc-boom", ["workspace:packages/grpc-boom"]],
       ["grpc-ts-health-check", ["workspace:packages/grpc-ts-health-check"]],
       ["heart-ping", ["workspace:packages/heart-ping"]],
       ["kalos", ["workspace:."]],
@@ -4636,23 +4636,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["grpc-boom", [
-        ["virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom", {
-          "packageLocation": "./.yarn/__virtual__/grpc-boom-virtual-4d115bfe21/1/packages/grpc-boom/",
+        ["npm:2.0.5", {
+          "packageLocation": "./.yarn/cache/grpc-boom-npm-2.0.5-a07682ad94-a22ac16053.zip/node_modules/grpc-boom/",
           "packageDependencies": [
-            ["grpc-boom", "virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom"],
-            ["@grpc/grpc-js", "npm:1.5.5"],
-            ["@types/jest", "npm:27.4.0"],
-            ["@types/node", "npm:16.11.25"],
-            ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],
-            ["kalos", "workspace:."],
-            ["protobufjs", "npm:6.11.2"],
-            ["rimraf", "npm:3.0.2"],
-            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+            ["grpc-boom", "npm:2.0.5"]
           ],
-          "packagePeers": [
-            "@types/node"
-          ],
-          "linkType": "SOFT",
+          "linkType": "HARD",
         }],
         ["workspace:packages/grpc-boom", {
           "packageLocation": "./packages/grpc-boom/",
@@ -4681,7 +4670,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.4.0"],
             ["@types/node", "npm:16.11.25"],
             ["google-protobuf", "npm:3.19.4"],
-            ["grpc-boom", "virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom"],
+            ["grpc-boom", "npm:2.0.5"],
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],
             ["kalos", "workspace:."],
             ["protobufjs", "npm:6.11.2"],

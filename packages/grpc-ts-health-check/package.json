@@ -16,7 +16,7 @@
   },
   "repository": "https://github.com/nicolaspearson/kalos.git",
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig.build.json && cp src/proto/health.proto dist/proto",
+    "build": "rimraf dist && tsc -p tsconfig.build.json && cp src/proto/health.proto dist/",
     "gen:proto": "yarn proto-loader-gen-types --arrays --objects --keepCase --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=src/proto/ src/proto/health.proto",
     "lint:eslint": "yarn exec:eslint --cache-file .eslintcache $(pwd)",
     "lint:eslint:fix": "yarn lint:eslint --fix",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "google-protobuf": "^3.19.4",
-    "grpc-boom": "^3.0.9"
+    "grpc-boom": "^2.0.5"
   },
   "devDependencies": {
     "@grpc/grpc-js": "^1.5.5",
