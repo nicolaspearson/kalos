@@ -6,6 +6,7 @@ This yarn monorepo contains a variety of packages that are published to npm.
 
 - [grpc-boom](./packages/grpc-boom/README.md)
 - [heart-ping](./packages/heart-ping/README.md)
+- [node-ts-uuid](./packages/node-ts-uuid/README.md)
 
 ### Working With Packages
 
@@ -30,6 +31,7 @@ package should adhere to this style and include the name of the package, e.g.
 
 - `chore(grpc-boom): set package.json version 3.0.9`
 - `docs(heart-ping): add contribution guidelines`
+- `feat(node-ts-uuid): initial migration`
 
 ## Release Workflow
 
