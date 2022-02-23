@@ -3483,7 +3483,7 @@ __metadata:
     rimraf: ^3.0.2
     typescript: ^4.5.5
   peerDependencies:
-    "@types/node": ^16.11.24
+    "@types/node": ^16.11.25
   languageName: unknown
   linkType: soft
 
