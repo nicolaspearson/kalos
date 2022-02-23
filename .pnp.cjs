@@ -1099,10 +1099,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@grpc/grpc-js", [\
-        ["npm:1.5.5", {\
-          "packageLocation": "./.yarn/cache/@grpc-grpc-js-npm-1.5.5-15f46cd55c-ccbe8267c1.zip/node_modules/@grpc/grpc-js/",\
+        ["npm:1.5.6", {\
+          "packageLocation": "./.yarn/cache/@grpc-grpc-js-npm-1.5.6-7df80bbc88-204bcaca44.zip/node_modules/@grpc/grpc-js/",\
           "packageDependencies": [\
-            ["@grpc/grpc-js", "npm:1.5.5"],\
+            ["@grpc/grpc-js", "npm:1.5.6"],\
             ["@grpc/proto-loader", "npm:0.6.9"],\
             ["@types/long", "npm:4.0.1"],\
             ["@types/node", "npm:17.0.17"]\
@@ -4667,7 +4667,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/grpc-boom-virtual-4d115bfe21/1/packages/grpc-boom/",\
           "packageDependencies": [\
             ["grpc-boom", "virtual:af2edd4cb9fae91d01c0209873e4356c43fd4709f6873ea8636a0bf4c8c523488353c00383b417d67a933b8a8424329d8203007fab49197f59b460dd7c44f7af#workspace:packages/grpc-boom"],\
-            ["@grpc/grpc-js", "npm:1.5.5"],\
+            ["@grpc/grpc-js", "npm:1.5.6"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:16.11.25"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],\
@@ -4685,7 +4685,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/grpc-boom/",\
           "packageDependencies": [\
             ["grpc-boom", "workspace:packages/grpc-boom"],\
-            ["@grpc/grpc-js", "npm:1.5.5"],\
+            ["@grpc/grpc-js", "npm:1.5.6"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:16.11.25"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],\
@@ -4702,7 +4702,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/grpc-ts-health-check/",\
           "packageDependencies": [\
             ["grpc-ts-health-check", "workspace:packages/grpc-ts-health-check"],\
-            ["@grpc/grpc-js", "npm:1.5.5"],\
+            ["@grpc/grpc-js", "npm:1.5.6"],\
             ["@grpc/proto-loader", "npm:0.6.9"],\
             ["@types/google-protobuf", "npm:3.15.5"],\
             ["@types/jest", "npm:27.4.1"],\
