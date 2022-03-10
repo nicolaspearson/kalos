@@ -462,6 +462,7 @@ export default class GrpcBoom implements ServiceError {
 
   /* eslint-enable @typescript-eslint/unbound-method */
 
+  /* eslint-disable @typescript-eslint/naming-convention */
   public static httpStatusCodeToGrpcErrorCodeMapper: { [httpStatusCode: number]: number } = {
     400: Status.INVALID_ARGUMENT.valueOf(),
     401: Status.UNAUTHENTICATED.valueOf(),
@@ -474,6 +475,7 @@ export default class GrpcBoom implements ServiceError {
     501: Status.UNIMPLEMENTED.valueOf(),
     503: Status.UNAVAILABLE.valueOf(),
   };
+  /* eslint-enable @typescript-eslint/naming-convention */
 
   /**
    * This method attempts to convert an http exception to a grpc
