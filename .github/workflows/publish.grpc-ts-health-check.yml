@@ -50,7 +50,7 @@ jobs:
           fi
           echo "::set-output name=version::$VERSION"
       - name: Update package.json version to ${{ steps.load_version.outputs.version }}
-        uses: mikefarah/yq@v4.21.1
+        uses: mikefarah/yq@v4.22.1
         with:
           cmd: |
             yq eval '.version = "${{ steps.load_version.outputs.version }}"' -i ${{ env.PACKAGE_JSON_FOLDER }}/package.json -j
