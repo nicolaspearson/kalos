@@ -3456,10 +3456,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-protobuf@npm:^3.20.0-rc.1":
-  version: 3.20.0-rc.1
-  resolution: "google-protobuf@npm:3.20.0-rc.1"
-  checksum: 254e9e8717396e545f28871d82172e8bb4302ae1f92a372714ac846cf38a3da58dfc9b07a47893ef425b47fe0efc34cb4a83cb7f8610b5ab7fc552b18adbd18d
+"google-protobuf@npm:^3.20.0-rc.2":
+  version: 3.20.0-rc.2
+  resolution: "google-protobuf@npm:3.20.0-rc.2"
+  checksum: f5ab017e90bba6ee881ef1e0df0a70ab7641286e2fb1d3edc3810a93f62fad4168f6f97ceb9d55c4ae3f8a9b78cd35ab03ecf3a8cb792625584de8d1ed40bc72
   languageName: node
   linkType: hard
 
@@ -3502,7 +3502,7 @@ __metadata:
     "@types/google-protobuf": ^3.15.5
     "@types/jest": ^27.4.1
     "@types/node": ^16.11.26
-    google-protobuf: ^3.20.0-rc.1
+    google-protobuf: ^3.20.0-rc.2
     grpc-boom: "link:../grpc-boom/src"
     jest: ^27.5.1
     kalos: "workspace:*"
