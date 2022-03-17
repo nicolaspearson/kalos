@@ -27,7 +27,7 @@
     "test:unit": "yarn exec:jest --config $(pwd)/test/jest.config.js"
   },
   "devDependencies": {
-    "@grpc/grpc-js": "^1.5.8",
+    "@grpc/grpc-js": "^1.5.9",
     "@types/jest": "27.4.1",
     "@types/node": "^16.11.26",
     "jest": "^27.5.1",
