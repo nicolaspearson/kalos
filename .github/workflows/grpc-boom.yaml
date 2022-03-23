@@ -44,7 +44,7 @@ jobs:
       - name: Install yarn dependencies
         run: yarn install --immutable
       - name: Check version
-        run: yarn workspace $PACKAGE version check interactive
+        run: yarn workspace $PACKAGE version check --interactive
       - name: Build package
         run: yarn workspace $PACKAGE build
       - name: Lint package
