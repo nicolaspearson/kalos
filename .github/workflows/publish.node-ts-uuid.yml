@@ -57,7 +57,7 @@ jobs:
           git config --global user.email "nic.s.pearson@gmail.com"
           git config --global user.name "Nicbotic"
           git add ${{ env.PACKAGE_JSON_FOLDER }}/package.json
-          git commit -m "chore(): release ${{ env.PACKAGE }}@${{ steps.load_version.outputs.version }} [ci-skip]"
+          git commit -m "chore(): release ${{ env.PACKAGE }}@${{ steps.load_version.outputs.version }} [skip-ci]"
       - name: Push changes to current git repository
         uses: ad-m/github-push-action@v0.6.0
         with:
