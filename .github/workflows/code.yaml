@@ -1,4 +1,4 @@
-name: code-workflow
+name: code
 
 on:
   workflow_call:
@@ -9,10 +9,11 @@ on:
     secrets:
       token:
         required: true
+        type: string
 
 jobs:
   test:
-    name: Build, Lint, and Test
+    name: build, lint, and test
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     strategy:

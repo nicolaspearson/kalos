@@ -1,0 +1,22 @@
+name: node-ts-uuid
+
+on:
+  push:
+    tags:
+      - 'node-ts-uuid/*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: The version to publish
+        required: true
+
+jobs:
+  code-workflow:
+    uses: ./.github/workflows/publish.yaml
+    with:
+      directory: packages/node-ts-uuid
+      package: node-ts-uuid
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      npm-publish-token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      token: ${{ secrets.REPO_ACCESS_TOKEN }}
