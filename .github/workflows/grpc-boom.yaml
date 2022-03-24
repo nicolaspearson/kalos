@@ -24,7 +24,7 @@ on:
 
 jobs:
   code-workflow:
-    uses: ./.github/workflows/code-workflow.yml
+    uses: ./.github/workflows/code-workflow.yaml
     with:
       package: grpc-boom
     secrets:
