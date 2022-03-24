@@ -11,7 +11,7 @@ on:
         required: true
 
 jobs:
-  code:
+  publish:
     uses: ./.github/workflows/publish.yaml
     with:
       directory: packages/grpc-boom

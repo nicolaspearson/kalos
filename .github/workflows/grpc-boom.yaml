@@ -23,7 +23,7 @@ on:
       - '!**/.gitignore'
 
 jobs:
-  publish:
+  code:
     uses: ./.github/workflows/code.yaml
     with:
       package: grpc-boom
