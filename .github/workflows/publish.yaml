@@ -12,13 +12,10 @@ on:
     secrets:
       github-token:
         required: true
-        type: string
       npm-publish-token:
         required: true
-        type: string
       token:
         required: true
-        type: string
 
 jobs:
   publish:

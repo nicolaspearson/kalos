@@ -11,7 +11,7 @@ on:
         required: true
 
 jobs:
-  code-workflow:
+  publish:
     uses: ./.github/workflows/publish.yaml
     with:
       directory: packages/node-ts-uuid

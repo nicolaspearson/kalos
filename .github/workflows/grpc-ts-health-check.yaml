@@ -23,7 +23,7 @@ on:
       - '!**/.gitignore'
 
 jobs:
-  code-workflow:
+  code:
     uses: ./.github/workflows/code.yaml
     with:
       package: grpc-ts-health-check
