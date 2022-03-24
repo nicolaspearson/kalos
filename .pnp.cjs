@@ -1099,10 +1099,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@grpc/grpc-js", [\
-        ["npm:1.5.9", {\
-          "packageLocation": "./.yarn/cache/@grpc-grpc-js-npm-1.5.9-0328c3fe28-557d233437.zip/node_modules/@grpc/grpc-js/",\
+        ["npm:1.5.10", {\
+          "packageLocation": "./.yarn/cache/@grpc-grpc-js-npm-1.5.10-803e171d88-1cce7479d6.zip/node_modules/@grpc/grpc-js/",\
           "packageDependencies": [\
-            ["@grpc/grpc-js", "npm:1.5.9"],\
+            ["@grpc/grpc-js", "npm:1.5.10"],\
             ["@grpc/proto-loader", "npm:0.6.9"],\
             ["@types/long", "npm:4.0.1"],\
             ["@types/node", "npm:17.0.21"]\
@@ -4696,7 +4696,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/grpc-boom/",\
           "packageDependencies": [\
             ["grpc-boom", "workspace:packages/grpc-boom"],\
-            ["@grpc/grpc-js", "npm:1.5.9"],\
+            ["@grpc/grpc-js", "npm:1.5.10"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:16.11.26"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:27.5.1"],\
@@ -4713,7 +4713,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/grpc-ts-health-check/",\
           "packageDependencies": [\
             ["grpc-ts-health-check", "workspace:packages/grpc-ts-health-check"],\
-            ["@grpc/grpc-js", "npm:1.5.9"],\
+            ["@grpc/grpc-js", "npm:1.5.10"],\
             ["@grpc/proto-loader", "npm:0.6.9"],\
             ["@types/google-protobuf", "npm:3.15.5"],\
             ["@types/jest", "npm:27.4.1"],\
