@@ -77,7 +77,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-mock", "npm:27.5.1"],\
             ["lint-staged", "npm:12.3.7"],\
             ["markdownlint-cli", "npm:0.31.1"],\
-            ["prettier", "npm:2.6.0"],\
+            ["prettier", "npm:2.6.1"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
             ["rimraf", "npm:3.0.2"],\
             ["run-script-webpack-plugin", "npm:0.0.11"],\
@@ -4005,7 +4005,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prettier", "npm:2.4.4"],\
             ["eslint", "npm:8.11.0"],\
             ["eslint-config-prettier", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:8.5.0"],\
-            ["prettier", "npm:2.6.0"],\
+            ["prettier", "npm:2.6.1"],\
             ["prettier-linter-helpers", "npm:1.0.0"]\
           ],\
           "packagePeers": [\
@@ -6119,7 +6119,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-mock", "npm:27.5.1"],\
             ["lint-staged", "npm:12.3.7"],\
             ["markdownlint-cli", "npm:0.31.1"],\
-            ["prettier", "npm:2.6.0"],\
+            ["prettier", "npm:2.6.1"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
             ["rimraf", "npm:3.0.2"],\
             ["run-script-webpack-plugin", "npm:0.0.11"],\
@@ -7222,10 +7222,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.6.0", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.6.0-fb29989f51-3e527ad622.zip/node_modules/prettier/",\
+        ["npm:2.6.1", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.6.1-94a3731152-78be1f8a3d.zip/node_modules/prettier/",\
           "packageDependencies": [\
-            ["prettier", "npm:2.6.0"]\
+            ["prettier", "npm:2.6.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7271,7 +7271,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.2.0"],\
             ["mri", "npm:1.2.0"],\
             ["multimatch", "npm:4.0.0"],\
-            ["prettier", "npm:2.6.0"]\
+            ["prettier", "npm:2.6.1"]\
           ],\
           "packagePeers": [\
             "@types/prettier",\
