@@ -11,6 +11,7 @@ import {
 export type LogLevel = 'log' | 'error' | 'warn' | 'debug' | 'verbose';
 
 export interface Options {
+  attachRequestId: boolean;
   environment: string;
   label: string;
   logLevel: LogLevel;
@@ -18,7 +19,18 @@ export interface Options {
   version: string;
 }
 
+export type OptionalProperty<T> = {
+  [K in keyof T]?: T[K];
+};
+
+export type OptionalConfig = OptionalProperty<Options>;
+
 export class Config implements Options {
+  // Whether or not a unique id should be attached to the express request object.
+  @IsBoolean()
+  @IsOptional()
+  readonly attachRequestId: boolean = true;
+
   // The deployment environment
   @IsString()
   @IsOptional()
@@ -33,11 +45,12 @@ export class Config implements Options {
   @IsOptional()
   readonly logLevel: LogLevel = 'error';
 
+  // Set to true to use the logstash formatter (typically for kubernetes environments).
   @IsBoolean()
   @IsOptional()
   readonly useLogstashFormat: boolean = false;
 
-  // The app or service version usually a git commit hash.
+  // The app or service version (usually a git commit hash).
   @IsString()
   @IsOptional()
   readonly version: string = 'unknown';
@@ -63,7 +76,7 @@ export class Config implements Options {
     return details;
   }
 
-  public static validate(options?: Options): {
+  public static validate(options?: OptionalConfig): {
     config: Config;
     errors: ValidationError[];
   } {

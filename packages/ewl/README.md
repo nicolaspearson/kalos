@@ -54,10 +54,10 @@ import { Ewl } from 'ewl';
 export let ewl: Ewl;
 
 export function initEwl(app: Application): void {
-  this.ewl = new Ewl({ label: 'app' });
+  this.ewl = new Ewl({ attachRequestId: true, label: 'app' });
   // Use express-http-context for context injection (request id)
   app.use(this.ewl.httpContextMiddleware);
-  app.use(this.ewl.requestIdHandler);
+  app.use(this.ewl.getRequestIdHandler());
   // Use express-winston for logging request information
   app.use(
     this.ewl.createHandler({
@@ -110,13 +110,13 @@ import { Ewl } from 'ewl';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-  const ewl = new Ewl({ label: 'app' });
+  const ewl = new Ewl({ attachRequestId: true, label: 'app' });
   // Set the default NestJS logger, allowing EWL to be the proxy.
   const app = await NestFactory.create(AppModule, { logger: ewl });
 
   // Use express-winston for logging request information
   app.use(
-    this.ewl.createHandler({
+    ewl.createHandler({
       bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
       colorize: true,
       expressFormat: true,
@@ -141,7 +141,7 @@ async function bootstrap() {
 
   // Use express-http-context for context injection (request id)
   app.use(ewl.httpContextMiddleware);
-  app.use(ewl.requestIdHandler);
+  app.use(ewl.getRequestIdHandler());
 
   ewl.debug('Starting application on localhost:3000');
 
