@@ -1,4 +1,4 @@
-name: grpc-ts-health-check
+name: publish-grpc-ts-health-check
 
 on:
   push:

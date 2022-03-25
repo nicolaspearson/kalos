@@ -1,4 +1,4 @@
-name: heart-ping
+name: publish-heart-ping
 
 on:
   push:

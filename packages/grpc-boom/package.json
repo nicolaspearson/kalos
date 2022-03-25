@@ -27,14 +27,14 @@
     "test:unit": "yarn exec:jest --config $(pwd)/test/jest.config.js"
   },
   "devDependencies": {
-    "@grpc/grpc-js": "^1.5.9",
+    "@grpc/grpc-js": "^1.5.10",
     "@types/jest": "27.4.1",
     "@types/node": "^16.11.26",
     "jest": "^27.5.1",
     "kalos": "workspace:*",
     "protobufjs": "^6.11.2",
     "rimraf": "^3.0.2",
-    "typescript": "^4.6.2"
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
     "@types/node": "^16.11.26"

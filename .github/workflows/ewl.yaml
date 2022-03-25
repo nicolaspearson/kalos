@@ -1,0 +1,31 @@
+name: ewl
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/ewl.yaml
+      - packages/ewl/**
+      - package.json
+      - tsconfig.json
+      - types/**/*.ts
+      - '!**.md'
+      - '!**/.gitignore'
+  pull_request:
+    paths:
+      - .github/workflows/ewl.yaml
+      - packages/ewl/**
+      - package.json
+      - tsconfig.json
+      - types/**/*.ts
+      - '!**.md'
+      - '!**/.gitignore'
+
+jobs:
+  code:
+    uses: ./.github/workflows/code.yaml
+    with:
+      package: ewl
+    secrets:
+      token: ${{ secrets.REPO_ACCESS_TOKEN }}

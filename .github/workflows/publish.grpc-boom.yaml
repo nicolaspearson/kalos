@@ -1,4 +1,4 @@
-name: grpc-boom
+name: publish-grpc-boom
 
 on:
   push:

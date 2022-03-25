@@ -4,6 +4,7 @@ This yarn monorepo contains a variety of packages that are published to npm.
 
 ## Packages
 
+- [ewl](./packages/ewl/README.md)
 - [grpc-boom](./packages/grpc-boom/README.md)
 - [grpc-ts-health-check](./packages/grpc-ts-health-check/README.md)
 - [heart-ping](./packages/heart-ping/README.md)
