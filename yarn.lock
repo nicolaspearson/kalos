@@ -3946,10 +3946,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-protobuf@npm:^3.20.0-rc.2":
-  version: 3.20.0-rc.2
-  resolution: "google-protobuf@npm:3.20.0-rc.2"
-  checksum: f5ab017e90bba6ee881ef1e0df0a70ab7641286e2fb1d3edc3810a93f62fad4168f6f97ceb9d55c4ae3f8a9b78cd35ab03ecf3a8cb792625584de8d1ed40bc72
+"google-protobuf@npm:^3.20.0":
+  version: 3.20.0
+  resolution: "google-protobuf@npm:3.20.0"
+  checksum: 2d243504362875f24a6e61fa3412cbdf04530166204f568734c2aa1b417336787555c0086c75b065c6972cbcf5cd47c3f1af4cadfe0655f0a75da3e1f962c656
   languageName: node
   linkType: hard
 
@@ -3992,7 +3992,7 @@ __metadata:
     "@types/google-protobuf": ^3.15.5
     "@types/jest": ^27.4.1
     "@types/node": ^16.11.26
-    google-protobuf: ^3.20.0-rc.2
+    google-protobuf: ^3.20.0
     grpc-boom: "link:../grpc-boom/src"
     jest: ^27.5.1
     kalos: "workspace:*"
