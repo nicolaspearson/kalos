@@ -1204,10 +1204,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/google-protobuf@npm:^3.15.5":
-  version: 3.15.5
-  resolution: "@types/google-protobuf@npm:3.15.5"
-  checksum: 43f52df3b56fe858ffca6a560cd83bb5b0d4441d11634dcf1f6838fda91629027687650389b9fd8960c18fcf3f530c11f74699b3d11e4fa9db1df4048c76ac40
+"@types/google-protobuf@npm:^3.15.6":
+  version: 3.15.6
+  resolution: "@types/google-protobuf@npm:3.15.6"
+  checksum: e8f7cd9d263093cd0a72eb10ff0bb8221e28aa8b9f601eddbe19b286932aae96fbc9ccb1f3a744525e7811fa87a6aeefd431858b6e2034f14a2dc68710a86d54
   languageName: node
   linkType: hard
 
@@ -3946,7 +3946,7 @@ __metadata:
   dependencies:
     "@grpc/grpc-js": ^1.6.7
     "@grpc/proto-loader": ^0.6.9
-    "@types/google-protobuf": ^3.15.5
+    "@types/google-protobuf": ^3.15.6
     "@types/jest": ^27.4.1
     "@types/node": ^16.11.27
     google-protobuf: ^3.20.1

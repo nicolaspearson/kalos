@@ -1773,10 +1773,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/google-protobuf", [\
-        ["npm:3.15.5", {\
-          "packageLocation": "./.yarn/cache/@types-google-protobuf-npm-3.15.5-2abce93017-43f52df3b5.zip/node_modules/@types/google-protobuf/",\
+        ["npm:3.15.6", {\
+          "packageLocation": "./.yarn/cache/@types-google-protobuf-npm-3.15.6-c2631bab69-e8f7cd9d26.zip/node_modules/@types/google-protobuf/",\
           "packageDependencies": [\
-            ["@types/google-protobuf", "npm:3.15.5"]\
+            ["@types/google-protobuf", "npm:3.15.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5241,7 +5241,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["grpc-ts-health-check", "workspace:packages/grpc-ts-health-check"],\
             ["@grpc/grpc-js", "npm:1.6.7"],\
             ["@grpc/proto-loader", "npm:0.6.9"],\
-            ["@types/google-protobuf", "npm:3.15.5"],\
+            ["@types/google-protobuf", "npm:3.15.6"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:16.11.27"],\
             ["google-protobuf", "npm:3.20.1"],\
