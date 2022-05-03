@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@grpc/grpc-js": "^1.6.7",
-    "@grpc/proto-loader": "^0.6.10",
+    "@grpc/proto-loader": "^0.6.11",
     "@types/google-protobuf": "^3.15.6",
     "@types/jest": "^27.5.0",
     "@types/node": "^16.11.33",

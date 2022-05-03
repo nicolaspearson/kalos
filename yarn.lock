@@ -794,18 +794,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grpc/proto-loader@npm:^0.6.10":
-  version: 0.6.10
-  resolution: "@grpc/proto-loader@npm:0.6.10"
+"@grpc/proto-loader@npm:^0.6.11":
+  version: 0.6.11
+  resolution: "@grpc/proto-loader@npm:0.6.11"
   dependencies:
     "@types/long": ^4.0.1
     lodash.camelcase: ^4.3.0
-    long: ^5.2.0
+    long: ^4.0.0 || ^5.2.0
     protobufjs: ^6.10.0
     yargs: ^16.2.0
   bin:
     proto-loader-gen-types: build/bin/proto-loader-gen-types.js
-  checksum: 0ccdafd845eca8fa211625885c0d00b1e1005af14e85cd3dc96e1c869e41226628b1c9b384fc78ddea9ced71ce6f88410eba8e7c072d64de299b74e3ed35ba07
+  checksum: e87a5d66c4f75c393f311470f01917859efa1d1ceffac478834b0e512f57a36bfa794f4be066cc5112d0cd1b565b357d9090708720eb12321fd0529e24ddae2a
   languageName: node
   linkType: hard
 
@@ -4056,7 +4056,7 @@ __metadata:
   resolution: "grpc-ts-health-check@workspace:packages/grpc-ts-health-check"
   dependencies:
     "@grpc/grpc-js": ^1.6.7
-    "@grpc/proto-loader": ^0.6.10
+    "@grpc/proto-loader": ^0.6.11
     "@types/google-protobuf": ^3.15.6
     "@types/jest": ^27.5.0
     "@types/node": ^16.11.33
@@ -5461,7 +5461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"long@npm:^5.2.0":
+"long@npm:^4.0.0 || ^5.2.0":
   version: 5.2.0
   resolution: "long@npm:5.2.0"
   checksum: 37aa4e67b9c3eebc6d9d675adcc9d06f06059ca268922a71273de389746bf07f0ff282f9e604d17fdf84c4149099b44e936ea2b621a6c4759a216621afa97efd
