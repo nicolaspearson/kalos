@@ -5254,7 +5254,7 @@ __metadata:
     pretty-quick: ^3.1.3
     rimraf: ^3.0.2
     run-script-webpack-plugin: ^0.0.11
-    ts-jest: ^28.0.0-next.3
+    ts-jest: ^28.0.0
     typescript: ^4.6.4
     winston-transport: ^4.5.0
   languageName: unknown
@@ -7360,9 +7360,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^28.0.0-next.3":
-  version: 28.0.0-next.3
-  resolution: "ts-jest@npm:28.0.0-next.3"
+"ts-jest@npm:^28.0.0":
+  version: 28.0.0
+  resolution: "ts-jest@npm:28.0.0"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
@@ -7389,7 +7389,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 51efe1efc3c0a11f55648cc6d8518e4b02e197f879134f2c969eda7fc9968c34e24940c8ea2892ab5feeaeaa102e2f524eab499104a2bc69f97f1c993bcd3869
+  checksum: a8bbcb5ec931e6f9a9a347cb28d211c1ca440e6205128fcd766e6edbb0706469cb0e675d766a86bfda813037d65a82f0956ed49a452241097a4577970279cb90
   languageName: node
   linkType: hard
 
