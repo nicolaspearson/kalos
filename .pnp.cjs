@@ -1280,13 +1280,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@grpc/proto-loader", [\
-        ["npm:0.6.11", {\
-          "packageLocation": "./.yarn/cache/@grpc-proto-loader-npm-0.6.11-366d1c39f8-e87a5d66c4.zip/node_modules/@grpc/proto-loader/",\
+        ["npm:0.6.12", {\
+          "packageLocation": "./.yarn/cache/@grpc-proto-loader-npm-0.6.12-2bb6e0685f-19bb53811e.zip/node_modules/@grpc/proto-loader/",\
           "packageDependencies": [\
-            ["@grpc/proto-loader", "npm:0.6.11"],\
+            ["@grpc/proto-loader", "npm:0.6.12"],\
             ["@types/long", "npm:4.0.1"],\
             ["lodash.camelcase", "npm:4.3.0"],\
-            ["long", "npm:5.2.0"],\
+            ["long", "npm:4.0.0"],\
             ["protobufjs", "npm:6.11.2"],\
             ["yargs", "npm:16.2.0"]\
           ],\
@@ -5349,7 +5349,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["grpc-ts-health-check", "workspace:packages/grpc-ts-health-check"],\
             ["@grpc/grpc-js", "npm:1.6.7"],\
-            ["@grpc/proto-loader", "npm:0.6.11"],\
+            ["@grpc/proto-loader", "npm:0.6.12"],\
             ["@types/google-protobuf", "npm:3.15.6"],\
             ["@types/jest", "npm:27.5.0"],\
             ["@types/node", "npm:17.0.31"],\
@@ -6961,13 +6961,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/long-npm-4.0.0-ecd96a31ed-16afbe8f74.zip/node_modules/long/",\
           "packageDependencies": [\
             ["long", "npm:4.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:5.2.0", {\
-          "packageLocation": "./.yarn/cache/long-npm-5.2.0-bbbd23a9e6-37aa4e67b9.zip/node_modules/long/",\
-          "packageDependencies": [\
-            ["long", "npm:5.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
