@@ -30,7 +30,7 @@
     "@grpc/grpc-js": "^1.6.7",
     "@types/jest": "27.5.0",
     "@types/node": "^16.11.33",
-    "jest": "^28.0.3",
+    "jest": "^28.1.0",
     "kalos": "workspace:*",
     "protobufjs": "^6.11.2",
     "rimraf": "^3.0.2",
