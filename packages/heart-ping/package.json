@@ -25,7 +25,7 @@
     "test:unit:future": "yarn exec:jest --config $(pwd)/test/jest.config.js"
   },
   "devDependencies": {
-    "@types/jest": "27.5.0",
+    "@types/jest": "27.5.1",
     "@types/node": "^16.11.34",
     "jest": "^28.1.0",
     "kalos": "workspace:*",
