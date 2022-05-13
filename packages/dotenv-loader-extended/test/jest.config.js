@@ -12,6 +12,7 @@ module.exports = Object.assign(
       },
     },
     coverageDirectory: '<rootDir>/coverage',
+    setupFiles: ['<rootDir>/test/setup.ts'],
     testMatch: ['**/test/**/*.spec.ts'],
   },
 );

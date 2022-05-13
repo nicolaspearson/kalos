@@ -25,14 +25,21 @@
     "test:unit": "yarn exec:jest --config $(pwd)/test/jest.config.js"
   },
   "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "nest-typed-config": "^2.4.1"
   },
   "devDependencies": {
+    "@nestjs/common": "^8.4.4",
+    "@types/axios": "^0.14.0",
     "@types/jest": "27.5.1",
     "@types/node": "^16.11.34",
+    "axios": "^0.27.2",
     "jest": "^28.1.0",
     "kalos": "workspace:*",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
+    "rxjs": "^7.5.5",
     "typescript": "^4.6.4"
   }
 }
