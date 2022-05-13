@@ -1,0 +1,22 @@
+name: publish-dotenv-loader-extended
+
+on:
+  push:
+    tags:
+      - 'dotenv-loader-extended/*.*.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: The version to publish
+        required: true
+
+jobs:
+  publish:
+    uses: ./.github/workflows/publish.yaml
+    with:
+      directory: packages/dotenv-loader-extended
+      package: dotenv-loader-extended
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      npm-publish-token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+      token: ${{ secrets.REPO_ACCESS_TOKEN }}

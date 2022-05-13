@@ -1,41 +1,25 @@
-import { plainToInstance } from 'class-transformer';
-import { validateSync } from 'class-validator';
-
-import { TypedConfigModule } from 'nest-typed-config';
-
-import { ConfigService } from '$/common/config/config.service';
+import { DotenvLoaderOptions, dotenvLoader } from 'nest-typed-config';
+export interface DotenvLoaderExtendedOptions extends DotenvLoaderOptions {
+  transformFromUpperSnakeCase?: boolean;
+}
 
 /**
- * It takes a raw config object, transforms all UPPER snake_case keys to camelCase,
- * validates it, and returns a validated instance of the config service.
+ * Dotenv loader extended loads configurations using `dotenv`.
  *
- * @param {object} rawConfig The raw configuration object received from the loader.
- * @returns The validated instance of the configService.
+ * @param options The loader options.
+ * @returns The parsed configuration object.
  */
-export function configValidator(rawConfig: Record<string, string>): ConfigService {
-  // Convert all environment variables from upper snake
-  // case to camel case, e.g. from NODE_ENV to nodeEnv.
-  const camelCaseConfig: Record<string, unknown> = transformDeep(rawConfig);
-
-  // Convert the config object to it's class equivalent.
-  const configService = plainToInstance(ConfigService, camelCaseConfig);
-  const schemaErrors = validateSync(configService, {
-    forbidUnknownValues: true,
-    whitelist: true,
-  });
-
-  // Check for errors
-  /* istanbul ignore next */
-  if (schemaErrors.length > 0) {
-    /* istanbul ignore next */
-    console.log(TypedConfigModule.getConfigErrorMessage(schemaErrors));
-    /* istanbul ignore next */
-    process.exit(1);
-  }
-
-  // Return the validated and transformed config.
-  return configService;
-}
+export const dotenvLoaderExtended = (options: DotenvLoaderExtendedOptions = {}) => {
+  return (): Record<string, unknown> => {
+    let config: Record<string, unknown> = dotenvLoader(options)();
+    if (options.transformFromUpperSnakeCase) {
+      // Convert all environment variables from upper snake
+      // case to camel case, e.g. from NODE_ENV to nodeEnv.
+      config = transformDeep(config);
+    }
+    return config;
+  };
+};
 
 /**
  * Transforms all keys in an object from snake_case
@@ -74,6 +58,6 @@ export function transformDeep(
  * @param {string} value The UPPER snake_case string to convert.
  * @returns The converted camelCase string.
  */
-function snakeCaseToCamelCase(value: string): string {
+export function snakeCaseToCamelCase(value: string): string {
   return value.toLowerCase().replace(/(_[a-z])/g, (group) => group.toUpperCase().replace('_', ''));
 }
