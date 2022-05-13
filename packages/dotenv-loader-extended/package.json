@@ -1,0 +1,38 @@
+{
+  "name": "dotenv-loader-extended",
+  "version": "0.0.1",
+  "description": "Extends the default dotenv-loader provided by nest-typed-config.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "keywords": [
+    "dotenv",
+    "environment",
+    "nestjs",
+    "typescript"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": "https://github.com/nicolaspearson/kalos.git",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "lint:eslint": "yarn exec:eslint --cache-file .eslintcache $(pwd)",
+    "lint:eslint:fix": "yarn lint:eslint --fix",
+    "lint:prettier": "yarn exec:prettier --check $(pwd)",
+    "lint:prettier:fix": "yarn exec:prettier --write $(pwd)",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:fix": "yarn lint:eslint:fix && yarn lint:prettier:fix",
+    "test:unit": "yarn exec:jest --config $(pwd)/test/jest.config.js"
+  },
+  "dependencies": {
+    "nest-typed-config": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.1",
+    "@types/node": "^16.11.34",
+    "jest": "^28.1.0",
+    "kalos": "workspace:*",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}

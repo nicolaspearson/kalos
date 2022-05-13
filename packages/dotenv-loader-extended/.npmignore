@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# Keep required
+!dist/**/*
+package.json

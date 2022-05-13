@@ -4,6 +4,7 @@ This yarn monorepo contains a variety of packages that are published to npm.
 
 ## Packages
 
+- [dotenv-loader-extended](./packages/dotenv-loader-extended/README.md)
 - [ewl](./packages/ewl/README.md)
 - [grpc-boom](./packages/grpc-boom/README.md)
 - [grpc-ts-health-check](./packages/grpc-ts-health-check/README.md)
