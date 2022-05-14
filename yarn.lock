@@ -3091,27 +3091,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-loader-extended@workspace:packages/dotenv-loader-extended":
-  version: 0.0.0-use.local
-  resolution: "dotenv-loader-extended@workspace:packages/dotenv-loader-extended"
-  dependencies:
-    "@nestjs/common": ^8.4.4
-    "@types/axios": ^0.14.0
-    "@types/jest": 27.5.1
-    "@types/node": ^16.11.34
-    axios: ^0.27.2
-    class-transformer: ^0.5.1
-    class-validator: ^0.13.2
-    jest: ^28.1.0
-    kalos: "workspace:*"
-    nest-typed-config: ^2.4.1
-    reflect-metadata: ^0.1.13
-    rimraf: ^3.0.2
-    rxjs: ^7.5.5
-    typescript: ^4.6.4
-  languageName: unknown
-  linkType: soft
-
 "dotenv@npm:^10.0.0":
   version: 10.0.0
   resolution: "dotenv@npm:10.0.0"
@@ -6111,6 +6090,27 @@ __metadata:
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
   languageName: node
   linkType: hard
+
+"nest-typed-config-extended@workspace:packages/nest-typed-config-extended":
+  version: 0.0.0-use.local
+  resolution: "nest-typed-config-extended@workspace:packages/nest-typed-config-extended"
+  dependencies:
+    "@nestjs/common": ^8.4.4
+    "@types/axios": ^0.14.0
+    "@types/jest": 27.5.1
+    "@types/node": ^16.11.34
+    axios: ^0.27.2
+    class-transformer: ^0.5.1
+    class-validator: ^0.13.2
+    jest: ^28.1.0
+    kalos: "workspace:*"
+    nest-typed-config: ^2.4.1
+    reflect-metadata: ^0.1.13
+    rimraf: ^3.0.2
+    rxjs: ^7.5.5
+    typescript: ^4.6.4
+  languageName: unknown
+  linkType: soft
 
 "nest-typed-config@npm:^2.4.1":
   version: 2.4.1

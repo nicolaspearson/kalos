@@ -1,6 +1,6 @@
-import { ClassConstructor, plainToInstance } from 'class-transformer';
-import { ValidatorOptions, validateSync } from 'class-validator';
-import { DotenvLoaderOptions, TypedConfigModule, dotenvLoader } from 'nest-typed-config';
+import { DotenvLoaderOptions, dotenvLoader } from 'nest-typed-config';
+
+export { TypedConfigModuleExtended } from './typed-config-extended.module';
 
 export interface DotenvLoaderExtendedOptions extends DotenvLoaderOptions {
   /**
@@ -19,7 +19,7 @@ export interface DotenvLoaderExtendedOptions extends DotenvLoaderOptions {
    *   DATABASE__TYPE=postgres
    *   DATABASE__CREDENTIALS__DATABASE=kalos
    *   DATABASE__CREDENTIALS__HOST=localhost
-   *   DATABASE__CREDENTIALS__PORT=3306
+   *   DATABASE__CREDENTIALS__PORT=5432
    *   DATABASE__CREDENTIALS__PASSWORD=secret
    *   DATABASE__CREDENTIALS__USERNAME=admin
    *   ENVIRONMENT=development
@@ -41,7 +41,7 @@ export interface DotenvLoaderExtendedOptions extends DotenvLoaderOptions {
    *         "database": "kalos",
    *         "host": "localhost",
    *         "password": "secret",
-   *         "port": 3306,
+   *         "port": 5432,
    *         "username": "admin"
    *       },
    *       "type": "postgres"
@@ -118,35 +118,4 @@ export function transformDeep(
  */
 export function snakeCaseToCamelCase(value: string): string {
   return value.toLowerCase().replace(/(_[a-z])/g, (group) => group.toUpperCase().replace('_', ''));
-}
-
-/**
- * It takes a raw config object, transforms all UPPER snake_case keys to camelCase,
- * validates it, and returns a validated instance of the config service.
- *
- * @param {object} rawConfig The raw configuration object received from the loader.
- * @returns The validated instance of the configService.
- */
-export function validateWithClassValidator<T extends object>(
-  rawConfig: Record<string, unknown>,
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  Config: ClassConstructor<T>,
-  options?: Partial<ValidatorOptions>,
-): T {
-  // Convert the config object to it's class equivalent.
-  const config = plainToInstance(Config, rawConfig);
-  const schemaErrors = validateSync(config, {
-    forbidUnknownValues: true,
-    whitelist: true,
-    ...options,
-  });
-
-  // Check for errors
-  if (schemaErrors.length > 0) {
-    const message = TypedConfigModule.getConfigErrorMessage(schemaErrors);
-    throw new Error(message);
-  }
-
-  // Return the validated and transformed config.
-  return config;
 }

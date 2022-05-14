@@ -1,12 +1,12 @@
-name: dotenv-loader-extended
+name: nest-typed-config-extended
 
 on:
   push:
     branches:
       - main
     paths:
-      - .github/workflows/dotenv-loader-extended.yaml
-      - packages/dotenv-loader-extended/**
+      - .github/workflows/nest-typed-config-extended.yaml
+      - packages/nest-typed-config-extended/**
       - package.json
       - tsconfig.json
       - types/**/*.ts
@@ -14,8 +14,8 @@ on:
       - '!**/.gitignore'
   pull_request:
     paths:
-      - .github/workflows/dotenv-loader-extended.yaml
-      - packages/dotenv-loader-extended/**
+      - .github/workflows/nest-typed-config-extended.yaml
+      - packages/nest-typed-config-extended/**
       - package.json
       - tsconfig.json
       - types/**/*.ts
@@ -26,6 +26,6 @@ jobs:
   code:
     uses: ./.github/workflows/code.yaml
     with:
-      package: dotenv-loader-extended
+      package: nest-typed-config-extended
     secrets:
       token: ${{ secrets.REPO_ACCESS_TOKEN }}

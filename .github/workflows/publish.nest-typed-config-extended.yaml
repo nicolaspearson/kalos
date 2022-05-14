@@ -1,9 +1,9 @@
-name: publish-dotenv-loader-extended
+name: publish-nest-typed-config-extended
 
 on:
   push:
     tags:
-      - 'dotenv-loader-extended/*.*.*'
+      - 'nest-typed-config-extended/*.*.*'
   workflow_dispatch:
     inputs:
       version:
@@ -14,8 +14,8 @@ jobs:
   publish:
     uses: ./.github/workflows/publish.yaml
     with:
-      directory: packages/dotenv-loader-extended
-      package: dotenv-loader-extended
+      directory: packages/nest-typed-config-extended
+      package: nest-typed-config-extended
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       npm-publish-token: ${{ secrets.NPM_PUBLISH_TOKEN }}

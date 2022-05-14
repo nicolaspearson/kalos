@@ -1,10 +1,11 @@
 {
-  "name": "dotenv-loader-extended",
+  "name": "nest-typed-config-extended",
   "version": "0.0.1",
-  "description": "Extends the default dotenv-loader provided by nest-typed-config.",
+  "description": "Extends the default dotenv-loader and module provided by nest-typed-config.",
   "license": "MIT",
   "main": "dist/index.js",
   "keywords": [
+    "config",
     "dotenv",
     "environment",
     "nestjs",
@@ -25,12 +26,12 @@
     "test:unit": "yarn exec:jest --config $(pwd)/test/jest.config.js"
   },
   "dependencies": {
+    "@nestjs/common": "^8.4.4",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "nest-typed-config": "^2.4.1"
   },
   "devDependencies": {
-    "@nestjs/common": "^8.4.4",
     "@types/axios": "^0.14.0",
     "@types/jest": "27.5.1",
     "@types/node": "^16.11.34",

@@ -1,6 +1,6 @@
 module.exports = Object.assign(
   {},
-  require(`kalos/packages/dotenv-loader-extended/jest.config.js`),
+  require(`kalos/packages/nest-typed-config-extended/jest.config.js`),
   {
     collectCoverageFrom: ['src/**/*.ts'],
     coverageThreshold: {
