@@ -1,6 +1,6 @@
 {
   "name": "node-ts-uuid",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A simple uuid generator",
   "license": "MIT",
   "main": "dist/index.js",
