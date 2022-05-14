@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@types/jest": "27.5.1",
-    "@types/node": "^16.11.34",
+    "@types/node": "^16.11.35",
     "jest": "^28.1.0",
     "kalos": "workspace:*",
     "rimraf": "^3.0.2",

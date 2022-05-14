@@ -29,7 +29,7 @@
   "devDependencies": {
     "@grpc/grpc-js": "^1.6.7",
     "@types/jest": "27.5.1",
-    "@types/node": "^16.11.34",
+    "@types/node": "^16.11.35",
     "jest": "^28.1.0",
     "kalos": "workspace:*",
     "protobufjs": "^6.11.2",
@@ -37,6 +37,6 @@
     "typescript": "^4.6.4"
   },
   "peerDependencies": {
-    "@types/node": "^16.11.34"
+    "@types/node": "^16.11.35"
   }
 }
