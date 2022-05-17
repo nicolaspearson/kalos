@@ -11,7 +11,6 @@ function bodySanitizer(
   body: Record<string, unknown> | undefined,
   bodyBlacklist: string[] | undefined,
 ): Record<string, unknown> | undefined {
-  /* istanbul ignore else: else path does not matter */
   if (body && bodyBlacklist) {
     for (const key of bodyBlacklist) {
       if (body && body[key]) {
@@ -54,8 +53,7 @@ export function sanitizeRequest(
         .join('; ');
     }
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (req as any)[propertyName] as expressWinston.FilterRequest;
+  return (req[propertyName] || {}) as expressWinston.FilterRequest;
 }
 
 /**
@@ -72,9 +70,7 @@ export function sanitizeResponse(
   options: expressWinston.BaseLoggerOptions,
 ): expressWinston.FilterResponse {
   if (propertyName === 'body') {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    res['body'] = bodySanitizer({ ...res['body'] }, options.bodyBlacklist);
+    res['body'] = bodySanitizer(res['body'] as Record<string, unknown>, options.bodyBlacklist);
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (res as any)[propertyName] as expressWinston.FilterResponse;
+  return (res[propertyName] || {}) as expressWinston.FilterResponse;
 }

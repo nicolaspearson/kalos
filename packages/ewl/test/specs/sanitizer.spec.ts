@@ -19,6 +19,12 @@ describe('Sanitizer', () => {
       fake: { param: 'isFake' },
     } as unknown as expressWinston.FilterRequest;
 
+    test('should skip an undefined body', () => {
+      expect(
+        sanitizeRequest({ body: undefined } as unknown as expressWinston.FilterRequest, 'body'),
+      ).toEqual({});
+    });
+
     test('should redact headers correctly', () => {
       expect(sanitizeRequest(req, 'headers')).toEqual({
         authorization: 'Bearer [REDACTED]',
