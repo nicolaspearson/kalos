@@ -449,9 +449,8 @@ describe('Grpc Boom', () => {
   describe('initialize', () => {
     test('initialize without a message correctly', () => {
       const grpcBoom = GrpcBoom.internal('Initializing');
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      grpcBoom.message = undefined;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      grpcBoom.message = undefined as any;
       expect(grpcBoom['initialize'](grpcBoom, grpcBoom.code)).toMatchObject({});
     });
   });
@@ -459,13 +458,12 @@ describe('Grpc Boom', () => {
   describe('reformat', () => {
     test('reformats an instance correctly', () => {
       const grpcBoom = GrpcBoom.internal('Reformatting');
-      /* eslint-disable @typescript-eslint/ban-ts-comment */
-      // @ts-ignore
-      grpcBoom.code = undefined;
-      grpcBoom.error = undefined;
-      // @ts-ignore
-      grpcBoom.message = undefined;
-      /* eslint-enable @typescript-eslint/ban-ts-comment */
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      grpcBoom.code = undefined as any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      grpcBoom.error = undefined as any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      grpcBoom.message = undefined as any;
       grpcBoom['reformat']();
       expect(grpcBoom).toMatchObject({});
     });

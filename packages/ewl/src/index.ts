@@ -117,7 +117,6 @@ export class Ewl {
    * @returns The middleware handler.
    */
   public createHandler(options: BaseLoggerOptions): Handler {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return expressWinstonLogger({
       expressFormat: false,
       ignoreRoute: /* istanbul ignore next */ () => false,

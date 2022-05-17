@@ -31,8 +31,9 @@ const osMock = {
 };
 
 jest.mock('os', () => ({
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  networkInterfaces: () => osMock.networkInterfaces(),
+  networkInterfaces: (): {
+    en0: os.NetworkInterfaceInfo[];
+  } => osMock.networkInterfaces(),
 }));
 
 const options: UuidOptions = {

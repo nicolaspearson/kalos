@@ -6,9 +6,7 @@ import { format } from 'winston';
 import { storage } from './async-storage';
 import { Config } from './config';
 
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 function attachMetadata(config: Config, info: TransformableInfo): TransformableInfo {
-  // Add extra metadata from the config
   info.environment = config.environment;
   info.version = config.version;
   if (!info.requestId) {
@@ -17,7 +15,6 @@ function attachMetadata(config: Config, info: TransformableInfo): TransformableI
   }
   return info;
 }
-/* eslint-enable @typescript-eslint/no-unsafe-assignment */
 
 export function injectMetadata(config: Config): Format {
   return format((info) => attachMetadata(config, info))();
@@ -55,7 +52,6 @@ function attachMessage(message: string | Record<string, unknown>): string {
 }
 
 export function defaultFormatter(config: Config, info: TransformableInfo): string {
-  // Collect all fields independently, ignore meta and stringify the rest
   attachMetadata(config, info);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { environment, level, label, timestamp, message, meta, splat, ...rest } = info;
@@ -80,10 +76,7 @@ export function logstashFormatter(config: Config): Format {
       logstash['@timestamp'] = timestamp;
     }
     logstash['@fields'] = rest;
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    info[MESSAGE] = jsonStringify(logstash);
+    info[MESSAGE.toString()] = jsonStringify(logstash);
     return info;
   })();
 }
