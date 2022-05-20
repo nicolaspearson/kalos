@@ -33,20 +33,6 @@ export class Ewl {
 
     const logger = this.create();
 
-    if (config.enableRequestLogging) {
-      this.createLoggerMiddlewareHandler({
-        bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
-        colorize: config.environment === 'development',
-        expressFormat: true,
-        headerBlacklist: ['cookie', 'token'],
-        meta: true,
-        metaField: 'express',
-        requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
-        responseWhitelist: ['body', 'headers', 'statusCode'],
-        statusLevels: true,
-      });
-    }
-
     // Proxify the logger instance to use a child logger from async storage if it exists.
     this.logger = new Proxy(logger, {
       get(target: Logger, property: string | symbol, receiver: unknown): Logger {
@@ -64,6 +50,20 @@ export class Ewl {
         next();
       });
     };
+
+    if (config.enableRequestLogging) {
+      this.createLoggerMiddlewareHandler({
+        bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
+        colorize: config.environment === 'development',
+        expressFormat: true,
+        headerBlacklist: ['cookie', 'token'],
+        meta: true,
+        metaField: 'express',
+        requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
+        responseWhitelist: ['body', 'headers', 'statusCode'],
+        statusLevels: true,
+      });
+    }
   }
 
   debug(message: string, context?: string): Logger {
