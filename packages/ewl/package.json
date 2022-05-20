@@ -1,6 +1,6 @@
 {
   "name": "ewl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "EWL provides common defaults for logging in an express application using winston.",
   "license": "MIT",
   "main": "dist/index.js",
