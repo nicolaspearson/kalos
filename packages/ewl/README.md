@@ -9,7 +9,7 @@
 
 EWL (express-winston-logger) provides common defaults for logging in an express application using
 winston. It is pre-configured with request tracing enabled and extends some of the features provided
-by express-winston, e.g. body blacklisting.
+by express-winston, e.g. body blacklisting redaction.
 
 ## Installation
 
@@ -23,7 +23,7 @@ yarn add ewl
 import { Ewl } from 'ewl';
 
 const ewl = new Ewl();
-ewl.debug('This logs to console by default.');
+ewl.debug('This logs to the console by default.');
 ```
 
 ### Basic Express Example
@@ -54,59 +54,22 @@ export let ewl: Ewl;
 
 export function initEwl(app: Application): void {
   ewl = new Ewl({
+    enableLoggerMiddleware: true,
     environment: process.env.ENVIRONMENT || 'development',
     label: 'app',
     logLevel: (process.env.LOG_LEVEL as LogLevel) || 'error',
     useLogstashFormat: false,
-    version: process.env.VERSION || 'local',
+    version: process.env.VERSION || 'unknown',
   });
 
-  // Use the context middleware for request id injection
+  // Use context middleware to inject the request id.
   app.use(ewl.contextMiddleware);
-
-  // Use express-winston for logging request information
-  app.use(
-    ewl.createHandler({
-      bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
-      colorize: true,
-      expressFormat: false,
-      headerBlacklist: ['cookie', 'token'],
-      ignoreRoute: () => false,
-      meta: true,
-      metaField: 'express',
-      msg: 'HTTP {{res.statusCode}} {{req.method}} {{res.responseTime}}ms {{req.url}}',
-      requestWhitelist: [
-        'headers',
-        'method',
-        'httpVersion',
-        'originalUrl',
-        'query',
-        'params',
-        'url',
-      ],
-      responseWhitelist: ['headers', 'statusCode'],
-      statusLevels: true,
-    }),
-  );
-}
-```
-
-`/middleware/logger.middleware.ts`:
-
-```typescript
-import { NextFunction, Request, Response } from 'express';
-
-import { ewl } from '../logger';
-
-export function loggerMiddleware(req: Request, _: Response, next: NextFunction): void {
-  ewl.debug(`${req.method} ${req.path}`);
-  next();
 }
 ```
 
 ### Basic NestJS Example
 
-`index.ts` / `main.ts`:
+`main.ts`:
 
 ```typescript
 import { NestFactory } from '@nestjs/core';
@@ -117,49 +80,47 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const ewl = new Ewl({
+    enableLoggerMiddleware: true,
     environment: process.env.ENVIRONMENT || 'development',
     label: 'app',
     logLevel: (process.env.LOG_LEVEL as LogLevel) || 'error',
     useLogstashFormat: false,
-    version: process.env.VERSION || 'local',
+    version: process.env.VERSION || 'unknown',
   });
 
   // Set the default NestJS logger, allowing EWL to be the proxy.
   const app = await NestFactory.create(AppModule, { logger: ewl });
 
-  // Use the context middleware for request id injection
+  // Use context middleware to inject the request id.
   app.use(ewl.contextMiddleware);
-
-  // Use express-winston for logging request information
-  app.use(
-    ewl.createHandler({
-      bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
-      colorize: true,
-      expressFormat: false,
-      headerBlacklist: ['cookie', 'token'],
-      ignoreRoute: () => false,
-      meta: true,
-      metaField: 'express',
-      msg: 'HTTP {{res.statusCode}} {{req.method}} {{res.responseTime}}ms {{req.url}}',
-      requestWhitelist: [
-        'headers',
-        'method',
-        'httpVersion',
-        'originalUrl',
-        'query',
-        'params',
-        'url',
-      ],
-      responseWhitelist: ['headers', 'statusCode'],
-      statusLevels: true,
-    }),
-  );
 
   ewl.debug('Starting application on localhost:3000');
 
   await app.listen(3000, 'localhost');
 }
+
 bootstrap();
+```
+
+### Customizing `express-winston` Logger Middleware
+
+```typescript
+const ewl = new Ewl({
+  enableLoggerMiddleware: false,
+});
+
+// Set express-winston middleware options
+ewl.createLoggerMiddlewareHandler({
+  bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
+  colorize: true,
+  expressFormat: true,
+  headerBlacklist: ['cookie', 'token'],
+  meta: true,
+  metaField: 'express',
+  requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
+  responseWhitelist: ['body', 'headers', 'statusCode'],
+  statusLevels: true,
+});
 ```
 
 ## License

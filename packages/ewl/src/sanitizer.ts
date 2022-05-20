@@ -14,7 +14,7 @@ function bodySanitizer(
   if (body && bodyBlacklist) {
     for (const key of bodyBlacklist) {
       if (body && body[key]) {
-        body[key] = 'REDACTED';
+        body[key] = '[REDACTED]';
       }
     }
   }
@@ -31,7 +31,11 @@ function bodySanitizer(
 export function sanitizeRequest(
   req: expressWinston.FilterRequest,
   propertyName: string,
+  options: expressWinston.BaseLoggerOptions,
 ): expressWinston.FilterRequest {
+  if (propertyName === 'body') {
+    req['body'] = bodySanitizer(req['body'] as Record<string, unknown>, options.bodyBlacklist);
+  }
   if (propertyName === 'headers') {
     // The 'if-none-match' header can break logstash JSON format.
     if ('if-none-match' in req.headers) req.headers['if-none-match'] = 'EXCLUDED';
@@ -43,10 +47,10 @@ export function sanitizeRequest(
       req.headers.cookie = cookies
         .map((cookie: string) => {
           if (cookie.startsWith('AccessToken=')) {
-            return 'AccessToken=REDACTED';
+            return 'AccessToken=[REDACTED]';
           }
           if (cookie.startsWith('RefreshToken=')) {
-            return 'RefreshToken=REDACTED';
+            return 'RefreshToken=[REDACTED]';
           }
           return cookie;
         })

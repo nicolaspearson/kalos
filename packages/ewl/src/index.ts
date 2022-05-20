@@ -18,11 +18,11 @@ import { sanitizeRequest, sanitizeResponse } from './sanitizer';
 export { Environment, LogLevel } from './config';
 
 export class Ewl {
-  public readonly config: Config;
+  readonly config: Config;
 
-  public readonly logger: Logger;
+  readonly logger: Logger;
 
-  public readonly contextMiddleware: (req: Request, res: Response, next: NextFunction) => void;
+  readonly contextMiddleware: (req: Request, res: Response, next: NextFunction) => void;
 
   constructor(options?: OptionalConfig) {
     const { config, errors } = Config.validate(options);
@@ -30,7 +30,23 @@ export class Ewl {
       throw new Error(jsonStringify(Config.formatValidationErrors(errors)));
     }
     this.config = config;
+
     const logger = this.create();
+
+    if (config.enableLoggerMiddleware) {
+      this.createLoggerMiddlewareHandler({
+        bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
+        colorize: config.environment === 'development',
+        expressFormat: true,
+        headerBlacklist: ['cookie', 'token'],
+        meta: true,
+        metaField: 'express',
+        requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
+        responseWhitelist: ['body', 'headers', 'statusCode'],
+        statusLevels: true,
+      });
+    }
+
     // Proxify the logger instance to use a child logger from async storage if it exists.
     this.logger = new Proxy(logger, {
       get(target: Logger, property: string | symbol, receiver: unknown): Logger {
@@ -39,6 +55,7 @@ export class Ewl {
         return Reflect.get(target, property, receiver) as Logger;
       },
     });
+
     this.contextMiddleware = (_req: Request, _res: Response, next: NextFunction): void => {
       const store = new Map<string, StoreContents>();
       const requestId = uuidv4();
@@ -49,27 +66,27 @@ export class Ewl {
     };
   }
 
-  public debug(message: string, context?: string): Logger {
+  debug(message: string, context?: string): Logger {
     return this.logger.debug(message, { context });
   }
 
-  public error(message: string, trace?: string, context?: string): Logger {
+  error(message: string, trace?: string, context?: string): Logger {
     return this.logger.error(message, { trace, context });
   }
 
-  public info(message: string, context?: string): Logger {
+  info(message: string, context?: string): Logger {
     return this.logger.info(message, { context });
   }
 
-  public log(message: string, context?: string): Logger {
+  log(message: string, context?: string): Logger {
     return this.logger.info(message, { context });
   }
 
-  public verbose(message: string, context?: string): Logger {
+  verbose(message: string, context?: string): Logger {
     return this.logger.verbose(message, { context });
   }
 
-  public warn(message: string, context?: string): Logger {
+  warn(message: string, context?: string): Logger {
     return this.logger.warn(message, { context });
   }
 
@@ -78,7 +95,7 @@ export class Ewl {
    *
    * @returns The Logger instance with transports attached by environment.
    */
-  public create(): Logger {
+  create(): Logger {
     const logTransporters: Transport[] = [];
 
     // Array of strings containing the levels to log to stderr instead of stdout
@@ -116,7 +133,7 @@ export class Ewl {
    * @param {BaseLoggerOptions} options The express-winston logger options.
    * @returns The middleware handler.
    */
-  public createHandler(options: BaseLoggerOptions): Handler {
+  createLoggerMiddlewareHandler(options: BaseLoggerOptions): Handler {
     return expressWinstonLogger({
       expressFormat: false,
       ignoreRoute: /* istanbul ignore next */ () => false,
@@ -124,7 +141,7 @@ export class Ewl {
       metaField: 'express',
       msg: '{{req.method}} {{req.url}}',
       requestFilter: /* istanbul ignore next */ (req: FilterRequest, propertyName: string) =>
-        sanitizeRequest(req, propertyName),
+        sanitizeRequest(req, propertyName, options),
       responseFilter: /* istanbul ignore next */ (res: FilterResponse, propertyName: string) =>
         sanitizeResponse(res, propertyName, options),
       ...options,

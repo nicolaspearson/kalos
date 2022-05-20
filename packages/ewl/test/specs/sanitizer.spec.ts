@@ -21,21 +21,47 @@ describe('Sanitizer', () => {
 
     test('should skip an undefined body', () => {
       expect(
-        sanitizeRequest({ body: undefined } as unknown as expressWinston.FilterRequest, 'body'),
+        sanitizeRequest({ body: undefined } as unknown as expressWinston.FilterRequest, 'body', {
+          bodyBlacklist: ['sensitive'],
+        }),
       ).toEqual({});
     });
 
     test('should redact headers correctly', () => {
-      expect(sanitizeRequest(req, 'headers')).toEqual({
+      expect(
+        sanitizeRequest(req, 'headers', {
+          bodyBlacklist: ['sensitive'],
+        }),
+      ).toEqual({
         authorization: 'Bearer [REDACTED]',
         // eslint-disable-next-line @typescript-eslint/naming-convention
         'if-none-match': 'EXCLUDED',
-        cookie: 'AccessToken=REDACTED; RefreshToken=REDACTED; OtherCookie=NoSecret',
+        cookie: 'AccessToken=[REDACTED]; RefreshToken=[REDACTED]; OtherCookie=NoSecret',
+      });
+    });
+
+    test('should redact blacklisted body properties', () => {
+      expect(
+        sanitizeRequest(
+          {
+            body: { sensitive: 'should be redacted' },
+          } as unknown as expressWinston.FilterRequest,
+          'body',
+          {
+            bodyBlacklist: ['sensitive'],
+          },
+        ),
+      ).toEqual({
+        sensitive: '[REDACTED]',
       });
     });
 
     test('should return other properties unaltered', () => {
-      expect(sanitizeRequest(req, 'fake')).toEqual(req.fake);
+      expect(
+        sanitizeRequest(req, 'fake', {
+          bodyBlacklist: ['sensitive'],
+        }),
+      ).toEqual(req.fake);
     });
 
     test('should not alter other headers', () => {
@@ -43,6 +69,9 @@ describe('Sanitizer', () => {
         sanitizeRequest(
           { headers: { test: '1' } } as unknown as expressWinston.FilterRequest,
           'headers',
+          {
+            bodyBlacklist: ['sensitive'],
+          },
         ),
       ).toEqual({ test: '1' });
     });
@@ -100,7 +129,7 @@ describe('Sanitizer', () => {
           },
         ),
       ).toEqual({
-        sensitive: 'REDACTED',
+        sensitive: '[REDACTED]',
       });
     });
   });

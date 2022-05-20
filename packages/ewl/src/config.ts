@@ -26,6 +26,11 @@ export type OptionalProperty<T> = {
 export type OptionalConfig = OptionalProperty<Options>;
 
 export class Config implements Options {
+  // Log requests via express-winston middleware.
+  @IsBoolean()
+  @IsOptional()
+  readonly enableLoggerMiddleware: boolean = true;
+
   // The deployment environment
   @IsString()
   @IsOptional()
@@ -50,10 +55,7 @@ export class Config implements Options {
   @IsOptional()
   readonly version: string = 'unknown';
 
-  public static formatValidationErrors(
-    errors: ValidationError[],
-    details = {},
-  ): Record<string, unknown> {
+  static formatValidationErrors(errors: ValidationError[], details = {}): Record<string, unknown> {
     if (errors.length > 0) {
       for (const error of errors) {
         details =
@@ -71,7 +73,7 @@ export class Config implements Options {
     return details;
   }
 
-  public static validate(options?: OptionalConfig): {
+  static validate(options?: OptionalConfig): {
     config: Config;
     errors: ValidationError[];
   } {
