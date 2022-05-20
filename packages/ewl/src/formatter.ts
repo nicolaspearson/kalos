@@ -76,7 +76,9 @@ export function logstashFormatter(config: Config): Format {
       logstash['@timestamp'] = timestamp;
     }
     logstash['@fields'] = rest;
-    info[MESSAGE.toString()] = jsonStringify(logstash);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    info[MESSAGE] = jsonStringify(logstash);
     return info;
   })();
 }
