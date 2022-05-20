@@ -146,6 +146,7 @@ export class Ewl {
         sanitizeRequest(req, propertyName, options),
       responseFilter: /* istanbul ignore next */ (res: FilterResponse, propertyName: string) =>
         sanitizeResponse(res, propertyName, options),
+      bodyBlacklist: [],
       ...options,
       winstonInstance: this.logger,
     });
