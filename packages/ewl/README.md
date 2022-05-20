@@ -64,6 +64,9 @@ export function initEwl(app: Application): void {
 
   // Use context middleware to inject the request id.
   app.use(ewl.contextMiddleware);
+
+  // Use request middleware to inject express metadata.
+  app.use(ewl.requestMiddleware);
 }
 ```
 
@@ -94,6 +97,9 @@ async function bootstrap() {
   // Use context middleware to inject the request id.
   app.use(ewl.contextMiddleware);
 
+  // Use request middleware to inject express metadata.
+  app.use(ewl.requestMiddleware);
+
   ewl.debug('Starting application on localhost:3000');
 
   await app.listen(3000, 'localhost');
@@ -110,7 +116,7 @@ const ewl = new Ewl({
 });
 
 // Set express-winston middleware options
-ewl.createLoggerMiddlewareHandler({
+ewl.createRequestMiddleware({
   bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
   colorize: true,
   expressFormat: true,
@@ -121,6 +127,9 @@ ewl.createLoggerMiddlewareHandler({
   responseWhitelist: ['body', 'headers', 'statusCode'],
   statusLevels: true,
 });
+
+// Use request middleware to inject express metadata.
+app.use(ewl.requestMiddleware);
 ```
 
 ## License

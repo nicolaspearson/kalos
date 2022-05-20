@@ -89,9 +89,9 @@ describe('EWL', () => {
     });
   });
 
-  describe('createLoggerMiddlewareHandler', () => {
+  describe('createRequestMiddleware', () => {
     test('should be created correctly', () => {
-      ewl.createLoggerMiddlewareHandler({
+      ewl.createRequestMiddleware({
         bodyBlacklist: ['sensitive'],
         colorize: true,
       });

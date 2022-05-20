@@ -1,4 +1,4 @@
-import { Handler, NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import {
   BaseLoggerOptions,
   FilterRequest,
@@ -23,6 +23,8 @@ export class Ewl {
   readonly logger: Logger;
 
   readonly contextMiddleware: (req: Request, res: Response, next: NextFunction) => void;
+
+  requestMiddleware: ((req: Request, res: Response, next: NextFunction) => void) | null = null;
 
   constructor(options?: OptionalConfig) {
     const { config, errors } = Config.validate(options);
@@ -52,7 +54,7 @@ export class Ewl {
     };
 
     if (config.enableRequestLogging) {
-      this.createLoggerMiddlewareHandler({
+      this.createRequestMiddleware({
         bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
         colorize: config.environment === 'development',
         expressFormat: true,
@@ -133,8 +135,8 @@ export class Ewl {
    * @param {BaseLoggerOptions} options The express-winston logger options.
    * @returns The middleware handler.
    */
-  createLoggerMiddlewareHandler(options: BaseLoggerOptions): Handler {
-    return expressWinstonLogger({
+  createRequestMiddleware(options: BaseLoggerOptions): void {
+    this.requestMiddleware = expressWinstonLogger({
       expressFormat: false,
       ignoreRoute: /* istanbul ignore next */ () => false,
       meta: true,
