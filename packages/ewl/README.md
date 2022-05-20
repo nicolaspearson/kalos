@@ -54,7 +54,7 @@ export let ewl: Ewl;
 
 export function initEwl(app: Application): void {
   ewl = new Ewl({
-    enableLoggerMiddleware: true,
+    enableRequestLogging: true,
     environment: process.env.ENVIRONMENT || 'development',
     label: 'app',
     logLevel: (process.env.LOG_LEVEL as LogLevel) || 'error',
@@ -80,7 +80,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const ewl = new Ewl({
-    enableLoggerMiddleware: true,
+    enableRequestLogging: true,
     environment: process.env.ENVIRONMENT || 'development',
     label: 'app',
     logLevel: (process.env.LOG_LEVEL as LogLevel) || 'error',
@@ -102,11 +102,11 @@ async function bootstrap() {
 bootstrap();
 ```
 
-### Customizing `express-winston` Logger Middleware
+### Customizing `express-winston` Request Logger Middleware
 
 ```typescript
 const ewl = new Ewl({
-  enableLoggerMiddleware: false,
+  enableRequestLogging: false,
 });
 
 // Set express-winston middleware options

@@ -37,7 +37,7 @@ describe('Config', () => {
 
     test('should should errors if validation fails', () => {
       const options = {
-        enableLoggerMiddleware: true,
+        enableRequestLogging: true,
         environment: 'development',
         label: 'app',
         logLevel: 'not-valid' as LogLevel,

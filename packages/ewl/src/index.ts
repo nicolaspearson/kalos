@@ -33,7 +33,7 @@ export class Ewl {
 
     const logger = this.create();
 
-    if (config.enableLoggerMiddleware) {
+    if (config.enableRequestLogging) {
       this.createLoggerMiddlewareHandler({
         bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
         colorize: config.environment === 'development',

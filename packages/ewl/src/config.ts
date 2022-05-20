@@ -29,7 +29,7 @@ export class Config implements Options {
   // Log requests via express-winston middleware.
   @IsBoolean()
   @IsOptional()
-  readonly enableLoggerMiddleware: boolean = true;
+  readonly enableRequestLogging: boolean = true;
 
   // The deployment environment
   @IsString()
