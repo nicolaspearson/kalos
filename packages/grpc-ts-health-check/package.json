@@ -44,7 +44,7 @@
     "grpc-boom": "link:../grpc-boom/src",
     "jest": "^28.1.0",
     "kalos": "workspace:*",
-    "protobufjs": "^6.11.2",
+    "protobufjs": "^6.11.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.4"
   },
