@@ -12,6 +12,7 @@ export type Environment = 'development' | 'production' | 'staging' | 'test' | st
 export type LogLevel = 'debug' | 'error' | 'info' | 'log' | 'verbose' | 'warn';
 
 export interface Options {
+  enableRequestLogging: boolean;
   environment: Environment;
   label: string;
   logLevel: LogLevel;
