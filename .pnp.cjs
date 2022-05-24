@@ -93,7 +93,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.2"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
             ["rimraf", "npm:3.0.2"],\
-            ["run-script-webpack-plugin", "npm:0.0.12"],\
+            ["run-script-webpack-plugin", "npm:0.0.14"],\
             ["ts-jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=7ad353"],\
             ["winston-transport", "npm:4.5.0"]\
@@ -6958,7 +6958,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.2"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
             ["rimraf", "npm:3.0.2"],\
-            ["run-script-webpack-plugin", "npm:0.0.12"],\
+            ["run-script-webpack-plugin", "npm:0.0.14"],\
             ["ts-jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.0.2"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=7ad353"],\
             ["winston-transport", "npm:4.5.0"]\
@@ -8659,10 +8659,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["run-script-webpack-plugin", [\
-        ["npm:0.0.12", {\
-          "packageLocation": "./.yarn/cache/run-script-webpack-plugin-npm-0.0.12-8ed95f61be-e2c959136f.zip/node_modules/run-script-webpack-plugin/",\
+        ["npm:0.0.14", {\
+          "packageLocation": "./.yarn/cache/run-script-webpack-plugin-npm-0.0.14-67c7c3360b-6290f7743b.zip/node_modules/run-script-webpack-plugin/",\
           "packageDependencies": [\
-            ["run-script-webpack-plugin", "npm:0.0.12"]\
+            ["run-script-webpack-plugin", "npm:0.0.14"]\
           ],\
           "linkType": "HARD"\
         }]\
