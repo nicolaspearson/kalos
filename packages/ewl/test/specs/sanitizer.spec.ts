@@ -35,7 +35,7 @@ describe('Sanitizer', () => {
       ).toEqual({
         authorization: 'Bearer [REDACTED]',
         // eslint-disable-next-line @typescript-eslint/naming-convention
-        'if-none-match': 'EXCLUDED',
+        'if-none-match': '[EXCLUDED]',
         cookie: 'AccessToken=[REDACTED]; RefreshToken=[REDACTED]; OtherCookie=NoSecret',
       });
     });

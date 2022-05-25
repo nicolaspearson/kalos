@@ -54,17 +54,7 @@ export class Ewl {
     };
 
     if (config.enableRequestLogging) {
-      this.createRequestMiddleware({
-        bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
-        colorize: config.environment === 'development',
-        expressFormat: true,
-        headerBlacklist: ['cookie', 'token'],
-        meta: true,
-        metaField: 'express',
-        requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
-        responseWhitelist: ['body', 'headers', 'statusCode'],
-        statusLevels: true,
-      });
+      this.createRequestMiddleware(config.requestLoggingOptions);
     }
   }
 
@@ -137,16 +127,12 @@ export class Ewl {
    */
   createRequestMiddleware(options: BaseLoggerOptions): void {
     this.requestMiddleware = expressWinstonLogger({
-      expressFormat: false,
-      ignoreRoute: /* istanbul ignore next */ () => false,
-      meta: true,
-      metaField: 'express',
-      msg: '{{req.method}} {{req.url}}',
       requestFilter: /* istanbul ignore next */ (req: FilterRequest, propertyName: string) =>
         sanitizeRequest(req, propertyName, options),
       responseFilter: /* istanbul ignore next */ (res: FilterResponse, propertyName: string) =>
         sanitizeResponse(res, propertyName, options),
       ...options,
+      // This is handled internally by the sanitize methods.
       bodyBlacklist: [],
       winstonInstance: this.logger,
     });

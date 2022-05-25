@@ -113,19 +113,17 @@ bootstrap();
 ```typescript
 const ewl = new Ewl({
   enableRequestLogging: false,
-});
-
-// Set express-winston middleware options
-ewl.createRequestMiddleware({
-  bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
-  colorize: true,
-  expressFormat: true,
-  headerBlacklist: ['cookie', 'token'],
-  meta: true,
-  metaField: 'express',
-  requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
-  responseWhitelist: ['body', 'headers', 'statusCode'],
-  statusLevels: true,
+  requestLoggingOptions: {
+    bodyBlacklist: ['accessToken', 'password', 'refreshToken'],
+    colorize: true,
+    expressFormat: true,
+    headerBlacklist: ['cookie', 'token'],
+    meta: true,
+    metaField: 'express',
+    requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
+    responseWhitelist: ['body', 'headers', 'statusCode'],
+    statusLevels: true,
+  },
 });
 
 // Use request middleware to inject express metadata.

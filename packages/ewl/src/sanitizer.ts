@@ -38,7 +38,7 @@ export function sanitizeRequest(
   }
   if (propertyName === 'headers') {
     // The 'if-none-match' header can break logstash JSON format.
-    if ('if-none-match' in req.headers) req.headers['if-none-match'] = 'EXCLUDED';
+    if ('if-none-match' in req.headers) req.headers['if-none-match'] = '[EXCLUDED]';
     // The 'authorization' header has the plaintext jwt, we should never log it.
     if (req.headers.authorization) req.headers.authorization = 'Bearer [REDACTED]';
     // The 'cookie' headers could contain jwt's.
