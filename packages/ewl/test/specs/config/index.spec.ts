@@ -1,4 +1,4 @@
-import { Config, LogLevel } from '../../src/config';
+import { Config, LogLevel } from '../../../src/config';
 
 describe('Config', () => {
   describe('formatValidationErrors', () => {
@@ -35,12 +35,35 @@ describe('Config', () => {
       });
     });
 
-    test('should should errors if validation fails', () => {
+    test('should create errors if validation fails', () => {
       const options = {
         enableRequestLogging: true,
         environment: 'development',
         label: 'app',
         logLevel: 'not-valid' as LogLevel,
+        requestLoggingOptions: {
+          allowFilterOutWhitelistedRequestBody: undefined,
+          baseMeta: undefined,
+          bodyBlacklist: ['accessToken', 'password', 'refreshToken', 'token'],
+          bodyWhitelist: undefined,
+          colorize: false,
+          expressFormat: true,
+          format: undefined,
+          headerBlacklist: ['cookie', 'token'],
+          ignoreRoute: expect.any(Function),
+          ignoredRoutes: undefined,
+          meta: true,
+          metaField: 'express',
+          msg: '{{req.method}} {{req.url}}',
+          requestField: undefined,
+          requestFilter: undefined,
+          requestWhitelist: ['body', 'headers', 'method', 'params', 'query', 'url'],
+          responseField: undefined,
+          responseFilter: undefined,
+          responseWhitelist: ['body', 'headers', 'statusCode'],
+          skip: undefined,
+          statusLevels: true,
+        },
         useLogstashFormat: false,
         version: 'unknown',
       };

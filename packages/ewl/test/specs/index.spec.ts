@@ -24,6 +24,9 @@ describe('EWL', () => {
       environment: 'development',
       label: 'app',
       logLevel: 'debug' as LogLevel,
+      requestLoggingOptions: {
+        colorize: true,
+      },
       useLogstashFormat: false,
       version: 'unknown',
     });

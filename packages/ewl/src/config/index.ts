@@ -1,21 +1,29 @@
-import { plainToInstance } from 'class-transformer';
+import { Type, plainToInstance } from 'class-transformer';
 import {
   IsBoolean,
   IsIn,
+  IsObject,
   IsOptional,
   IsString,
+  ValidateNested,
   ValidationError,
   validateSync,
 } from 'class-validator';
+import { BaseLoggerOptions } from 'express-winston';
+import 'reflect-metadata';
+
+import { RequestLoggingConfig } from './request-logging.config';
 
 export type Environment = 'development' | 'production' | 'staging' | 'test' | string;
 export type LogLevel = 'debug' | 'error' | 'info' | 'log' | 'verbose' | 'warn';
+export { RequestLoggingConfig } from './request-logging.config';
 
 export interface Options {
   enableRequestLogging: boolean;
   environment: Environment;
   label: string;
   logLevel: LogLevel;
+  requestLoggingOptions: BaseLoggerOptions;
   useLogstashFormat: boolean;
   version: string;
 }
@@ -45,6 +53,13 @@ export class Config implements Options {
   @IsIn(['debug', 'error', 'info', 'log', 'verbose', 'warn'])
   @IsOptional()
   readonly logLevel: LogLevel = 'error';
+
+  // Set to true to use the logstash formatter (typically for kubernetes environments).
+  @ValidateNested()
+  @Type(() => RequestLoggingConfig)
+  @IsObject()
+  @IsOptional()
+  readonly requestLoggingOptions: BaseLoggerOptions = new RequestLoggingConfig();
 
   // Set to true to use the logstash formatter (typically for kubernetes environments).
   @IsBoolean()
