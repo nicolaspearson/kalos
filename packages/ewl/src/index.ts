@@ -127,11 +127,11 @@ export class Ewl {
    */
   createRequestMiddleware(options: BaseLoggerOptions): void {
     this.requestMiddleware = expressWinstonLogger({
+      ...options,
       requestFilter: /* istanbul ignore next */ (req: FilterRequest, propertyName: string) =>
         sanitizeRequest(req, propertyName, options),
       responseFilter: /* istanbul ignore next */ (res: FilterResponse, propertyName: string) =>
         sanitizeResponse(res, propertyName, options),
-      ...options,
       // This is handled internally by the sanitize methods.
       bodyBlacklist: [],
       winstonInstance: this.logger,
