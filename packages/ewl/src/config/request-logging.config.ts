@@ -4,8 +4,6 @@ import {
   DynamicLevelFunction,
   DynamicMetaFunction,
   MessageTemplate,
-  RequestFilter,
-  ResponseFilter,
   RouteFilter,
   StatusLevels,
 } from 'express-winston';
@@ -71,16 +69,10 @@ export class RequestLoggingConfig implements BaseLoggerOptions {
   @IsOptional()
   readonly msg: MessageTemplate = '{{req.method}} {{req.url}}';
 
-  @IsOptional()
-  readonly requestFilter?: RequestFilter;
-
   @IsString({ each: true })
   @IsArray()
   @IsOptional()
   readonly requestWhitelist: string[] = ['body', 'headers', 'method', 'params', 'query', 'url'];
-
-  @IsOptional()
-  readonly responseFilter?: ResponseFilter;
 
   @IsString({ each: true })
   @IsArray()
