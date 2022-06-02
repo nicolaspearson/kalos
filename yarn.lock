@@ -1004,7 +1004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:*, @nestjs/common@npm:^8.4.5":
+"@nestjs/common@npm:*":
   version: 8.4.5
   resolution: "@nestjs/common@npm:8.4.5"
   dependencies:
@@ -1026,6 +1026,31 @@ __metadata:
     class-validator:
       optional: true
   checksum: d0a6a48649bf9c93a7aea4435916d4ee2fca0aa220e8a1a3d9e88591403a82945258d092ea47efe1f0fca380acd1c67292fb81fcd947ed7c5aee974c89f8ba1f
+  languageName: node
+  linkType: hard
+
+"@nestjs/common@npm:^8.4.6":
+  version: 8.4.6
+  resolution: "@nestjs/common@npm:8.4.6"
+  dependencies:
+    axios: 0.27.2
+    iterare: 1.2.1
+    tslib: 2.4.0
+    uuid: 8.3.2
+  peerDependencies:
+    cache-manager: "*"
+    class-transformer: "*"
+    class-validator: "*"
+    reflect-metadata: ^0.1.12
+    rxjs: ^7.1.0
+  peerDependenciesMeta:
+    cache-manager:
+      optional: true
+    class-transformer:
+      optional: true
+    class-validator:
+      optional: true
+  checksum: db95e4195cd666c5a8feca1da90f4246ddabe0770c6c51f43d0b827bcea98e1019ee58a068ac1012adc3ac91314942a611869d04d44d480c486a0b482eddfaf3
   languageName: node
   linkType: hard
 
@@ -5872,7 +5897,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nest-typed-config-extended@workspace:packages/nest-typed-config-extended"
   dependencies:
-    "@nestjs/common": ^8.4.5
+    "@nestjs/common": ^8.4.6
     "@types/jest": 28.1.0
     "@types/node": ^17.0.36
     class-transformer: ^0.5.1
