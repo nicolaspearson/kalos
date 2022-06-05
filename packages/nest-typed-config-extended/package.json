@@ -32,7 +32,7 @@
     "nest-typed-config": "^2.4.1"
   },
   "devDependencies": {
-    "@types/jest": "28.1.0",
+    "@types/jest": "28.1.1",
     "@types/node": "^17.0.36",
     "jest": "^28.1.0",
     "kalos": "workspace:*",
