@@ -12,4 +12,4 @@ jobs:
       - name: Checkout git repository
         uses: actions/checkout@v3
       - name: Dependency review
-        uses: actions/dependency-review-action@v1
+        uses: actions/dependency-review-action@v2
