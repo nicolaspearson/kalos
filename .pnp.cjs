@@ -4737,7 +4737,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"],\
             ["uuid", "npm:8.3.2"],\
             ["validator", "npm:13.7.0"],\
-            ["winston", "npm:3.7.2"],\
+            ["winston", "npm:3.8.0"],\
             ["winston-transport", "npm:4.5.0"]\
           ],\
           "linkType": "SOFT"\
@@ -4871,7 +4871,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/winston", null],\
             ["chalk", "npm:2.4.2"],\
             ["lodash", "npm:4.17.21"],\
-            ["winston", "npm:3.7.2"]\
+            ["winston", "npm:3.8.0"]\
           ],\
           "packagePeers": [\
             "@types/winston",\
@@ -9697,10 +9697,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["winston", [\
-        ["npm:3.7.2", {\
-          "packageLocation": "./.yarn/cache/winston-npm-3.7.2-5336ad5eff-f1f1a860d2.zip/node_modules/winston/",\
+        ["npm:3.8.0", {\
+          "packageLocation": "./.yarn/cache/winston-npm-3.8.0-0af6da9192-a091fe4959.zip/node_modules/winston/",\
           "packageDependencies": [\
-            ["winston", "npm:3.7.2"],\
+            ["winston", "npm:3.8.0"],\
             ["@dabh/diagnostics", "npm:2.0.3"],\
             ["async", "npm:3.2.3"],\
             ["is-stream", "npm:2.0.1"],\
