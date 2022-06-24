@@ -88,7 +88,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.1"],\
             ["jest-mock", "npm:28.1.1"],\
             ["lint-staged", "npm:13.0.3"],\
-            ["logform", "npm:2.4.0"],\
+            ["logform", "npm:2.4.1"],\
             ["markdownlint-cli", "npm:0.31.1"],\
             ["prettier", "npm:2.7.1"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
@@ -4729,7 +4729,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["express-winston", "virtual:43c59f9a59780337ce2c42b4b6aea9e54704df41b4e48de35a8acc77de9d5118d6008451ae42e4cb4c073097bdb4c23abd5c1df5a1b58e7c09b79ffe5631a907#npm:4.2.0"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.1"],\
             ["kalos", "workspace:."],\
-            ["logform", "npm:2.4.0"],\
+            ["logform", "npm:2.4.1"],\
             ["reflect-metadata", "npm:0.1.13"],\
             ["rimraf", "npm:3.0.2"],\
             ["safe-stable-stringify", "npm:2.3.1"],\
@@ -6806,7 +6806,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.1"],\
             ["jest-mock", "npm:28.1.1"],\
             ["lint-staged", "npm:13.0.3"],\
-            ["logform", "npm:2.4.0"],\
+            ["logform", "npm:2.4.1"],\
             ["markdownlint-cli", "npm:0.31.1"],\
             ["prettier", "npm:2.7.1"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
@@ -7054,6 +7054,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/logform-npm-2.4.0-8b1d55d47a-e75ccccc1a.zip/node_modules/logform/",\
           "packageDependencies": [\
             ["logform", "npm:2.4.0"],\
+            ["@colors/colors", "npm:1.5.0"],\
+            ["fecha", "npm:4.2.3"],\
+            ["ms", "npm:2.1.3"],\
+            ["safe-stable-stringify", "npm:2.3.1"],\
+            ["triple-beam", "npm:1.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.4.1", {\
+          "packageLocation": "./.yarn/cache/logform-npm-2.4.1-0a99c2558a-94b859926d.zip/node_modules/logform/",\
+          "packageDependencies": [\
+            ["logform", "npm:2.4.1"],\
             ["@colors/colors", "npm:1.5.0"],\
             ["fecha", "npm:4.2.3"],\
             ["ms", "npm:2.1.3"],\
