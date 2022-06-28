@@ -6,6 +6,8 @@ import { format } from 'winston';
 import { storage } from './async-storage';
 import { Config } from './config';
 
+type LogMessage = string | Record<string, unknown>;
+
 function attachMetadata(config: Config, info: TransformableInfo): TransformableInfo {
   info.environment = config.environment;
   info.version = config.version;
@@ -17,7 +19,7 @@ function attachMetadata(config: Config, info: TransformableInfo): TransformableI
 }
 
 export function injectMetadata(config: Config): Format {
-  return format((info) => attachMetadata(config, info))();
+  return format((info: TransformableInfo) => attachMetadata(config, info))();
 }
 
 function attachError(error: Error): {
@@ -44,7 +46,7 @@ export function injectErrors(): Format {
   })();
 }
 
-function attachMessage(message: string | Record<string, unknown>): string {
+function attachMessage(message: LogMessage): string {
   if (message instanceof Object) {
     return jsonStringify(message);
   }
@@ -55,7 +57,9 @@ export function defaultFormatter(config: Config, info: TransformableInfo): strin
   attachMetadata(config, info);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { environment, level, label, timestamp, message, meta, splat, ...rest } = info;
-  return `[${environment}] ${level}: [${label}] ${attachMessage(message)} ${jsonStringify(rest)}`;
+  return `[${environment}] ${level}: [${label}] ${attachMessage(
+    message as LogMessage,
+  )} ${jsonStringify(rest)}`;
 }
 
 /**
@@ -70,7 +74,7 @@ export function logstashFormatter(config: Config): Format {
     const { message, timestamp, ...rest } = info;
     info = rest as TransformableInfo;
     if (message) {
-      logstash['@message'] = attachMessage(message);
+      logstash['@message'] = attachMessage(message as LogMessage);
     }
     if (timestamp) {
       logstash['@timestamp'] = timestamp;
