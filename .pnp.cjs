@@ -69,7 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:28.1.4"],\
             ["@types/node", "npm:18.0.0"],\
             ["@types/prettier", "npm:2.6.3"],\
-            ["@types/validator", "npm:13.7.3"],\
+            ["@types/validator", "npm:13.7.4"],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.30.4"],\
             ["@typescript-eslint/parser", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.30.4"],\
             ["eslint", "npm:8.19.0"],\
@@ -2184,10 +2184,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/validator", [\
-        ["npm:13.7.3", {\
-          "packageLocation": "./.yarn/cache/@types-validator-npm-13.7.3-ea3b1edcc6-15b6b5a7f6.zip/node_modules/@types/validator/",\
+        ["npm:13.7.4", {\
+          "packageLocation": "./.yarn/cache/@types-validator-npm-13.7.4-e7a332d4f5-718e72d86c.zip/node_modules/@types/validator/",\
           "packageDependencies": [\
-            ["@types/validator", "npm:13.7.3"]\
+            ["@types/validator", "npm:13.7.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4784,7 +4784,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.0.0"],\
             ["@types/triple-beam", "npm:1.3.2"],\
             ["@types/uuid", "npm:8.3.4"],\
-            ["@types/validator", "npm:13.7.3"],\
+            ["@types/validator", "npm:13.7.4"],\
             ["async_hooks", "npm:1.0.0"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.13.2"],\
@@ -6916,7 +6916,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:28.1.4"],\
             ["@types/node", "npm:18.0.0"],\
             ["@types/prettier", "npm:2.6.3"],\
-            ["@types/validator", "npm:13.7.3"],\
+            ["@types/validator", "npm:13.7.4"],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.30.4"],\
             ["@typescript-eslint/parser", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.30.4"],\
             ["eslint", "npm:8.19.0"],\
