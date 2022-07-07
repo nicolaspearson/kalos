@@ -46,7 +46,7 @@
     "jest": "^28.1.2",
     "jest-mock": "^28.1.1",
     "lint-staged": "^13.0.3",
-    "logform": "^2.4.1",
+    "logform": "^2.4.2",
     "markdownlint-cli": "^0.31.1",
     "prettier": "^2.7.1",
     "pretty-quick": "^3.1.3",
