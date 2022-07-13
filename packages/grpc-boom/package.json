@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@grpc/grpc-js": "^1.6.7",
-    "@types/jest": "28.1.4",
+    "@types/jest": "28.1.5",
     "@types/node": "^18.0.0",
     "jest": "^28.1.2",
     "kalos": "workspace:*",

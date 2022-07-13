@@ -66,7 +66,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:17.0.3"],\
             ["@commitlint/config-conventional", "npm:17.0.3"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["@types/prettier", "npm:2.6.3"],\
             ["@types/validator", "npm:13.7.4"],\
@@ -2009,10 +2009,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jest", [\
-        ["npm:28.1.4", {\
-          "packageLocation": "./.yarn/cache/@types-jest-npm-28.1.4-0d5921a434-97e22c6003.zip/node_modules/@types/jest/",\
+        ["npm:28.1.5", {\
+          "packageLocation": "./.yarn/cache/@types-jest-npm-28.1.5-baa8088d99-994bfc25a5.zip/node_modules/@types/jest/",\
           "packageDependencies": [\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["jest-matcher-utils", "npm:28.1.1"],\
             ["pretty-format", "npm:28.1.1"]\
           ],\
@@ -4477,7 +4477,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["eslint-plugin-jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:26.5.3"],\
             ["@types/eslint", null],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/typescript-eslint__eslint-plugin", null],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.30.6"],\
             ["@typescript-eslint/utils", "virtual:c08ca43ffc980fe32a94c081c8e4711f400b245bf906c53e93fd8e9fa6c1809bf076a889c1eb108ca1fc147ecf71b239978dda4af9c118e2f40dbe18a1566588#npm:5.27.0"],\
@@ -4790,7 +4790,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ewl", "workspace:packages/ewl"],\
             ["@types/common-tags", "npm:1.8.1"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/logform", "npm:1.10.1"],\
             ["@types/node", "npm:18.0.0"],\
             ["@types/triple-beam", "npm:1.3.2"],\
@@ -5516,7 +5516,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["grpc-boom", "workspace:packages/grpc-boom"],\
             ["@grpc/grpc-js", "npm:1.6.7"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.2"],\
             ["kalos", "workspace:."],\
@@ -5535,7 +5535,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@grpc/grpc-js", "npm:1.6.7"],\
             ["@grpc/proto-loader", "npm:0.6.13"],\
             ["@types/google-protobuf", "npm:3.15.6"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["google-protobuf", "npm:3.20.1"],\
             ["grpc-boom", "link:../grpc-boom/src::locator=grpc-ts-health-check%40workspace%3Apackages%2Fgrpc-ts-health-check"],\
@@ -5635,7 +5635,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/heart-ping/",\
           "packageDependencies": [\
             ["heart-ping", "workspace:packages/heart-ping"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.2"],\
             ["kalos", "workspace:."],\
@@ -6915,7 +6915,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/cli", "npm:17.0.3"],\
             ["@commitlint/config-conventional", "npm:17.0.3"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["@types/prettier", "npm:2.6.3"],\
             ["@types/validator", "npm:13.7.4"],\
@@ -7743,7 +7743,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["nest-typed-config-extended", "workspace:packages/nest-typed-config-extended"],\
             ["@nestjs/common", "virtual:e67c9dbfa7623e7c11f78a3b3ab2476db63afbf7bd7eec51434268a428fd304410ce5b9bb3dd8a7c30d2c6e6ee8508b956c5e14e71a8d7d14b8e2db80223c58b#npm:9.0.3"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.13.2"],\
@@ -7798,7 +7798,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/node-ts-uuid/",\
           "packageDependencies": [\
             ["node-ts-uuid", "workspace:packages/node-ts-uuid"],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/node", "npm:18.0.0"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.2"],\
             ["kalos", "workspace:."],\
@@ -9501,7 +9501,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],\
             ["@types/babel__core", null],\
             ["@types/esbuild", null],\
-            ["@types/jest", "npm:28.1.4"],\
+            ["@types/jest", "npm:28.1.5"],\
             ["@types/typescript", null],\
             ["babel-jest", null],\
             ["bs-logger", "npm:0.2.6"],\
