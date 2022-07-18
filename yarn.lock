@@ -639,21 +639,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grpc/proto-loader@npm:^0.6.13":
-  version: 0.6.13
-  resolution: "@grpc/proto-loader@npm:0.6.13"
-  dependencies:
-    "@types/long": ^4.0.1
-    lodash.camelcase: ^4.3.0
-    long: ^4.0.0
-    protobufjs: ^6.11.3
-    yargs: ^16.2.0
-  bin:
-    proto-loader-gen-types: build/bin/proto-loader-gen-types.js
-  checksum: 863417e961cfa3acb579124f5c2bbfbeaee4d507c33470dc0af3b6792892c68706c6c61e26629f5ff3d28cb631dc4f0a00233323135e322406e3cb19a0b92823
-  languageName: node
-  linkType: hard
-
 "@grpc/proto-loader@npm:^0.6.4":
   version: 0.6.12
   resolution: "@grpc/proto-loader@npm:0.6.12"
@@ -666,6 +651,21 @@ __metadata:
   bin:
     proto-loader-gen-types: build/bin/proto-loader-gen-types.js
   checksum: 19bb53811e650e9a975cafa1e0cb084870235cff957695a38a8429c4a71435d584740c1d780fb51882ff4d4863cb9c81393d4dc25c55f5078be283f5ea5289a9
+  languageName: node
+  linkType: hard
+
+"@grpc/proto-loader@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@grpc/proto-loader@npm:0.7.0"
+  dependencies:
+    "@types/long": ^4.0.1
+    lodash.camelcase: ^4.3.0
+    long: ^4.0.0
+    protobufjs: ^7.0.0
+    yargs: ^16.2.0
+  bin:
+    proto-loader-gen-types: build/bin/proto-loader-gen-types.js
+  checksum: 64fa85e9c15403b42d5be2a6e1aa75db58d3f32d3c12fc48001fc9435030f4952feae05bba2bc428b5092aa3d52edd8b1a629e000736776915582172c7053cd4
   languageName: node
   linkType: hard
 
@@ -4229,7 +4229,7 @@ __metadata:
   resolution: "grpc-ts-health-check@workspace:packages/grpc-ts-health-check"
   dependencies:
     "@grpc/grpc-js": ^1.6.7
-    "@grpc/proto-loader": ^0.6.13
+    "@grpc/proto-loader": ^0.7.0
     "@types/google-protobuf": ^3.15.6
     "@types/jest": ^28.1.6
     "@types/node": ^18.0.0
@@ -4242,7 +4242,7 @@ __metadata:
     typescript: ^4.7.4
   peerDependencies:
     "@grpc/grpc-js": ^1.6.7
-    "@grpc/proto-loader": ^0.6.13
+    "@grpc/proto-loader": ^0.7.0
   languageName: unknown
   linkType: soft
 
@@ -6724,7 +6724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:^6.10.0, protobufjs@npm:^6.11.3":
+"protobufjs@npm:^6.10.0":
   version: 6.11.3
   resolution: "protobufjs@npm:6.11.3"
   dependencies:
