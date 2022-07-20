@@ -1078,9 +1078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:^9.0.4":
-  version: 9.0.4
-  resolution: "@nestjs/common@npm:9.0.4"
+"@nestjs/common@npm:^9.0.5":
+  version: 9.0.5
+  resolution: "@nestjs/common@npm:9.0.5"
   dependencies:
     iterare: 1.2.1
     tslib: 2.4.0
@@ -1098,7 +1098,7 @@ __metadata:
       optional: true
     class-validator:
       optional: true
-  checksum: 6d9c3722f20503cfb392a75da4c185e5b9dc398ce1ebbdcfb13c0c5df523ab98cc3005af7412c7c6bc94054d5e5acfbec508d9d59ce301b05ac8baaaef407f1c
+  checksum: 5242b14d4f40ed4cb7ffc2413a40201be994005539d80fbd1f4e604dac8349d68e74ec79ba189b56f5460ae6e2c33defe2395b4c310a509134106142cee64e79
   languageName: node
   linkType: hard
 
@@ -6143,7 +6143,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nest-typed-config-extended@workspace:packages/nest-typed-config-extended"
   dependencies:
-    "@nestjs/common": ^9.0.4
+    "@nestjs/common": ^9.0.5
     "@types/jest": 28.1.6
     "@types/node": ^18.0.0
     class-transformer: ^0.5.1
