@@ -1115,11 +1115,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@grpc/grpc-js", [\
-        ["npm:1.6.7", {\
-          "packageLocation": "./.yarn/cache/@grpc-grpc-js-npm-1.6.7-2e10ef0dbb-2668b08c2e.zip/node_modules/@grpc/grpc-js/",\
+        ["npm:1.6.8", {\
+          "packageLocation": "./.yarn/cache/@grpc-grpc-js-npm-1.6.8-cd405ec4ac-2dd2e2bdc3.zip/node_modules/@grpc/grpc-js/",\
           "packageDependencies": [\
-            ["@grpc/grpc-js", "npm:1.6.7"],\
-            ["@grpc/proto-loader", "npm:0.6.12"],\
+            ["@grpc/grpc-js", "npm:1.6.8"],\
+            ["@grpc/proto-loader", "npm:0.7.0"],\
             ["@types/long", "npm:4.0.2"],\
             ["@types/node", "npm:17.0.36"]\
           ],\
@@ -1127,18 +1127,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@grpc/proto-loader", [\
-        ["npm:0.6.12", {\
-          "packageLocation": "./.yarn/cache/@grpc-proto-loader-npm-0.6.12-2bb6e0685f-19bb53811e.zip/node_modules/@grpc/proto-loader/",\
-          "packageDependencies": [\
-            ["@grpc/proto-loader", "npm:0.6.12"],\
-            ["@types/long", "npm:4.0.2"],\
-            ["lodash.camelcase", "npm:4.3.0"],\
-            ["long", "npm:4.0.0"],\
-            ["protobufjs", "npm:6.11.3"],\
-            ["yargs", "npm:16.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.7.0", {\
           "packageLocation": "./.yarn/cache/@grpc-proto-loader-npm-0.7.0-f65d10854d-64fa85e9c1.zip/node_modules/@grpc/proto-loader/",\
           "packageDependencies": [\
@@ -5527,7 +5515,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/grpc-boom/",\
           "packageDependencies": [\
             ["grpc-boom", "workspace:packages/grpc-boom"],\
-            ["@grpc/grpc-js", "npm:1.6.7"],\
+            ["@grpc/grpc-js", "npm:1.6.8"],\
             ["@types/jest", "npm:28.1.6"],\
             ["@types/node", "npm:18.0.0"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.3"],\
@@ -5544,7 +5532,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/grpc-ts-health-check/",\
           "packageDependencies": [\
             ["grpc-ts-health-check", "workspace:packages/grpc-ts-health-check"],\
-            ["@grpc/grpc-js", "npm:1.6.7"],\
+            ["@grpc/grpc-js", "npm:1.6.8"],\
             ["@grpc/proto-loader", "npm:0.7.0"],\
             ["@types/google-protobuf", "npm:3.15.6"],\
             ["@types/jest", "npm:28.1.6"],\
@@ -8384,26 +8372,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["protobufjs", [\
-        ["npm:6.11.3", {\
-          "packageLocation": "./.yarn/unplugged/protobufjs-npm-6.11.3-566fb31188/node_modules/protobufjs/",\
-          "packageDependencies": [\
-            ["protobufjs", "npm:6.11.3"],\
-            ["@protobufjs/aspromise", "npm:1.1.2"],\
-            ["@protobufjs/base64", "npm:1.1.2"],\
-            ["@protobufjs/codegen", "npm:2.0.4"],\
-            ["@protobufjs/eventemitter", "npm:1.1.0"],\
-            ["@protobufjs/fetch", "npm:1.1.0"],\
-            ["@protobufjs/float", "npm:1.0.2"],\
-            ["@protobufjs/inquire", "npm:1.1.0"],\
-            ["@protobufjs/path", "npm:1.1.2"],\
-            ["@protobufjs/pool", "npm:1.1.0"],\
-            ["@protobufjs/utf8", "npm:1.1.0"],\
-            ["@types/long", "npm:4.0.2"],\
-            ["@types/node", "npm:17.0.36"],\
-            ["long", "npm:4.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:7.0.0", {\
           "packageLocation": "./.yarn/unplugged/protobufjs-npm-7.0.0-caea7a2a3b/node_modules/protobufjs/",\
           "packageDependencies": [\
