@@ -215,7 +215,7 @@ export default class GrpcBoom implements ServiceError {
   public static boomify(instance: GrpcBoom | Error, options?: Options): GrpcBoom {
     const castInstance = instance as unknown as GrpcBoom;
 
-    let code: number = castInstance.code ? castInstance.code : GrpcBoom.fallbackStatus;
+    let code: number = castInstance.code ?? GrpcBoom.fallbackStatus;
     if (options && options.code) {
       code = options.code;
     }
@@ -233,7 +233,7 @@ export default class GrpcBoom implements ServiceError {
 
     const newOptions: Options = { code, error };
 
-    newOptions.details = castInstance.details ? castInstance.details : '';
+    newOptions.details = castInstance.details ?? '';
 
     if (options && options.details !== undefined) {
       newOptions.details = options.details;
@@ -495,8 +495,8 @@ export default class GrpcBoom implements ServiceError {
     return GrpcBoom.boomify(
       {
         code: grpcErrorCode,
-        details: details ? details : dataDetails || '',
-        message: message ? message : output?.payload?.message || '',
+        details: details ?? (dataDetails || ''),
+        message: message ?? (output?.payload?.message || ''),
       } as GrpcBoom,
       { metadata },
     );
