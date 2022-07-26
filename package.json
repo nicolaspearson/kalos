@@ -6,7 +6,7 @@
   "packageManager": "yarn@3.2.2",
   "engines": {
     "node": ">=v16.16.0",
-    "yarn": ">=3.2.1"
+    "yarn": ">=3.2.2"
   },
   "scripts": {
     "doctor": "yarn dlx @yarnpkg/doctor .",
