@@ -5506,10 +5506,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["google-protobuf", [\
-        ["npm:3.20.1", {\
-          "packageLocation": "./.yarn/cache/google-protobuf-npm-3.20.1-85dc1daa16-a440fbc329.zip/node_modules/google-protobuf/",\
+        ["npm:3.21.0", {\
+          "packageLocation": "./.yarn/cache/google-protobuf-npm-3.21.0-41a094319b-612a91b817.zip/node_modules/google-protobuf/",\
           "packageDependencies": [\
-            ["google-protobuf", "npm:3.20.1"]\
+            ["google-protobuf", "npm:3.21.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5558,7 +5558,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/google-protobuf", "npm:3.15.6"],\
             ["@types/jest", "npm:28.1.6"],\
             ["@types/node", "npm:18.6.1"],\
-            ["google-protobuf", "npm:3.20.1"],\
+            ["google-protobuf", "npm:3.21.0"],\
             ["grpc-boom", "link:../grpc-boom/src::locator=grpc-ts-health-check%40workspace%3Apackages%2Fgrpc-ts-health-check"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:28.1.3"],\
             ["kalos", "workspace:."],\
