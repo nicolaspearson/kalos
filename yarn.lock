@@ -636,13 +636,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grpc/grpc-js@npm:^1.6.8":
-  version: 1.6.8
-  resolution: "@grpc/grpc-js@npm:1.6.8"
+"@grpc/grpc-js@npm:^1.6.9":
+  version: 1.6.9
+  resolution: "@grpc/grpc-js@npm:1.6.9"
   dependencies:
     "@grpc/proto-loader": ^0.7.0
     "@types/node": ">=12.12.47"
-  checksum: 2dd2e2bdc3f0c50fa76f9466607c5b8832489b41ca0958446326e3ed4c693f2a120eedad06d451180ea50dbd3717d6d37282284fb6c1d5598e55ceaff454184f
+  checksum: 32cfc6e4a1642784dc607984cbde53d1f50d85040c6378539a50af1b9f568fc06544b41bafbff284167bb4dcd19d452cc3d1f683185eb7a9a4c913c0a0cb5ea0
   languageName: node
   linkType: hard
 
@@ -4255,7 +4255,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "grpc-boom@workspace:packages/grpc-boom"
   dependencies:
-    "@grpc/grpc-js": ^1.6.8
+    "@grpc/grpc-js": ^1.6.9
     "@types/jest": 28.1.6
     "@types/node": ^18.6.1
     jest: ^28.1.3
@@ -4264,7 +4264,7 @@ __metadata:
     rimraf: ^3.0.2
     typescript: ^4.7.4
   peerDependencies:
-    "@grpc/grpc-js": ^1.6.8
+    "@grpc/grpc-js": ^1.6.9
   languageName: unknown
   linkType: soft
 
@@ -4272,7 +4272,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "grpc-ts-health-check@workspace:packages/grpc-ts-health-check"
   dependencies:
-    "@grpc/grpc-js": ^1.6.8
+    "@grpc/grpc-js": ^1.6.9
     "@grpc/proto-loader": ^0.7.0
     "@types/google-protobuf": ^3.15.6
     "@types/jest": ^28.1.6
@@ -4285,7 +4285,7 @@ __metadata:
     rimraf: ^3.0.2
     typescript: ^4.7.4
   peerDependencies:
-    "@grpc/grpc-js": ^1.6.8
+    "@grpc/grpc-js": ^1.6.9
     "@grpc/proto-loader": ^0.7.0
   languageName: unknown
   linkType: soft
