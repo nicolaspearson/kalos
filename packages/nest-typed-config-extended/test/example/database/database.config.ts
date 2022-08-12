@@ -12,5 +12,5 @@ export class DatabaseConfig {
   // The database engine.
   @IsIn(['postgres'])
   @IsNotEmpty()
-  readonly type: 'postgres' = 'postgres';
+  readonly type = 'postgres' as const;
 }
