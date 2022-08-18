@@ -41,7 +41,7 @@ jobs:
     steps:
       - name: Create release draft
         id: release-wizard
-        uses: darioblanco/release-wizard@v1.1.0
+        uses: darioblanco/release-wizard@v2.0.1
         with:
           app: ${{ inputs.package }}
           draft: true
