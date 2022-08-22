@@ -47,3 +47,4 @@ jobs:
           draft: true
           templatePath: release-wizard.md
           token: ${{ secrets.token }}
+          withV: false
