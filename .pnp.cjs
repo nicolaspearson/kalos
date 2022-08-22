@@ -89,7 +89,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-mock", "npm:28.1.3"],\
             ["lint-staged", "npm:13.0.3"],\
             ["logform", "npm:2.4.2"],\
-            ["markdownlint-cli", "npm:0.32.1"],\
+            ["markdownlint-cli", "npm:0.32.2"],\
             ["prettier", "npm:2.7.1"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
             ["rimraf", "npm:3.0.2"],\
@@ -7015,7 +7015,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-mock", "npm:28.1.3"],\
             ["lint-staged", "npm:13.0.3"],\
             ["logform", "npm:2.4.2"],\
-            ["markdownlint-cli", "npm:0.32.1"],\
+            ["markdownlint-cli", "npm:0.32.2"],\
             ["prettier", "npm:2.7.1"],\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
             ["rimraf", "npm:3.0.2"],\
@@ -7401,20 +7401,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["markdownlint", [\
-        ["npm:0.26.1", {\
-          "packageLocation": "./.yarn/cache/markdownlint-npm-0.26.1-134775d73f-0a971abc92.zip/node_modules/markdownlint/",\
+        ["npm:0.26.2", {\
+          "packageLocation": "./.yarn/cache/markdownlint-npm-0.26.2-e3ee2fc897-9e20401410.zip/node_modules/markdownlint/",\
           "packageDependencies": [\
-            ["markdownlint", "npm:0.26.1"],\
+            ["markdownlint", "npm:0.26.2"],\
             ["markdown-it", "npm:13.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["markdownlint-cli", [\
-        ["npm:0.32.1", {\
-          "packageLocation": "./.yarn/cache/markdownlint-cli-npm-0.32.1-278d286d1c-094b559ef0.zip/node_modules/markdownlint-cli/",\
+        ["npm:0.32.2", {\
+          "packageLocation": "./.yarn/cache/markdownlint-cli-npm-0.32.2-4d7d4e1555-131cb66b0d.zip/node_modules/markdownlint-cli/",\
           "packageDependencies": [\
-            ["markdownlint-cli", "npm:0.32.1"],\
+            ["markdownlint-cli", "npm:0.32.2"],\
             ["commander", "npm:9.4.0"],\
             ["deep-extend", "npm:0.6.0"],\
             ["get-stdin", "npm:9.0.0"],\
@@ -7422,8 +7422,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.2.0"],\
             ["js-yaml", "npm:4.1.0"],\
             ["jsonc-parser", "npm:3.1.0"],\
-            ["markdownlint", "npm:0.26.1"],\
-            ["markdownlint-rule-helpers", "npm:0.17.1"],\
+            ["markdownlint", "npm:0.26.2"],\
+            ["markdownlint-rule-helpers", "npm:0.17.2"],\
             ["minimatch", "npm:5.1.0"],\
             ["run-con", "npm:1.2.11"]\
           ],\
@@ -7431,10 +7431,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["markdownlint-rule-helpers", [\
-        ["npm:0.17.1", {\
-          "packageLocation": "./.yarn/cache/markdownlint-rule-helpers-npm-0.17.1-eea15ea969-0d6db4f5a2.zip/node_modules/markdownlint-rule-helpers/",\
+        ["npm:0.17.2", {\
+          "packageLocation": "./.yarn/cache/markdownlint-rule-helpers-npm-0.17.2-bd05eb7570-e34c0266ff.zip/node_modules/markdownlint-rule-helpers/",\
           "packageDependencies": [\
-            ["markdownlint-rule-helpers", "npm:0.17.1"]\
+            ["markdownlint-rule-helpers", "npm:0.17.2"]\
           ],\
           "linkType": "HARD"\
         }]\
