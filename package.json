@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "description": "This is a monorepo for various libraries.",
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.2.4",
   "engines": {
     "node": ">=v16.16.0",
-    "yarn": ">=3.2.2"
+    "yarn": ">=3.2.4"
   },
   "scripts": {
     "doctor": "yarn dlx @yarnpkg/doctor .",
