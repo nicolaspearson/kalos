@@ -68,7 +68,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/node", "npm:18.6.1"],\
-            ["@types/prettier", "npm:2.7.0"],\
+            ["@types/prettier", "npm:2.7.1"],\
             ["@types/validator", "npm:13.7.6"],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.35.1"],\
             ["@typescript-eslint/parser", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.35.1"],\
@@ -2242,10 +2242,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:2.7.0", {\
-          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.7.0-5da1b0a357-bf5d0c7c12.zip/node_modules/@types/prettier/",\
+        ["npm:2.7.1", {\
+          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.7.1-d46ada27e6-5e3f58e229.zip/node_modules/@types/prettier/",\
           "packageDependencies": [\
-            ["@types/prettier", "npm:2.7.0"]\
+            ["@types/prettier", "npm:2.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4677,7 +4677,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:4.2.1"],\
             ["@types/eslint", null],\
             ["@types/eslint-config-prettier", null],\
-            ["@types/prettier", "npm:2.7.0"],\
+            ["@types/prettier", "npm:2.7.1"],\
             ["eslint", "npm:8.23.0"],\
             ["eslint-config-prettier", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:8.5.0"],\
             ["prettier", "npm:2.7.1"],\
@@ -7132,7 +7132,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/node", "npm:18.6.1"],\
-            ["@types/prettier", "npm:2.7.0"],\
+            ["@types/prettier", "npm:2.7.1"],\
             ["@types/validator", "npm:13.7.6"],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.35.1"],\
             ["@typescript-eslint/parser", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.35.1"],\
@@ -8514,7 +8514,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/pretty-quick-virtual-9d8b3e9969/0/cache/pretty-quick-npm-3.1.3-b3fdb9cf9e-28bdc32571.zip/node_modules/pretty-quick/",\
           "packageDependencies": [\
             ["pretty-quick", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:3.1.3"],\
-            ["@types/prettier", "npm:2.7.0"],\
+            ["@types/prettier", "npm:2.7.1"],\
             ["chalk", "npm:3.0.0"],\
             ["execa", "npm:4.1.0"],\
             ["find-up", "npm:4.1.0"],\
