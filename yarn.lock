@@ -5847,7 +5847,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"logform@npm:2.5.1, logform@npm:^2.3.2, logform@npm:^2.4.0":
+"logform@npm:*, logform@npm:2.5.1, logform@npm:^2.3.2, logform@npm:^2.4.0":
   version: 2.5.1
   resolution: "logform@npm:2.5.1"
   dependencies:
