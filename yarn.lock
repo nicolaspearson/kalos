@@ -4272,7 +4272,7 @@ __metadata:
     rimraf: 5.0.1
     typescript: 5.0.4
   peerDependencies:
-    "@grpc/grpc-js": 1.6.10
+    "@grpc/grpc-js": 1.8.14
   languageName: unknown
   linkType: soft
 
@@ -4293,7 +4293,7 @@ __metadata:
     rimraf: 5.0.1
     typescript: 5.0.4
   peerDependencies:
-    "@grpc/grpc-js": 1.6.10
+    "@grpc/grpc-js": 1.8.14
     "@grpc/proto-loader": 0.7.2
   languageName: unknown
   linkType: soft
