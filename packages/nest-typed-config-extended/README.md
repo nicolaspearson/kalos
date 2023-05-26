@@ -8,7 +8,7 @@
 [license-image]: https://img.shields.io/npm/l/make-coverage-badge.svg
 
 Extends the default `dotenv-loader` and `module` provided by
-[`nest-typed-config`](https://www.npmjs.com/package/nest-typed-config).
+[`nest-typed-config`](https://www.npmjs.com/package/nest-typed-config) NPM package.
 
 ## Installation
 
