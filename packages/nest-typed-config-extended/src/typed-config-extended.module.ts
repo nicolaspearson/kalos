@@ -3,6 +3,9 @@ import { ClassConstructor, plainToInstance } from 'class-transformer';
 import { ValidatorOptions, validateSync } from 'class-validator';
 import { TypedConfigModule, TypedConfigModuleOptions } from 'nest-typed-config';
 
+/**
+ * The extended config module with custom validation function.
+ */
 @Module({})
 export class TypedConfigModuleExtended {
   public static forRoot<T extends object>(options: TypedConfigModuleOptions): DynamicModule {
