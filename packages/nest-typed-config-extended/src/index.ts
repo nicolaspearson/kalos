@@ -97,6 +97,7 @@ export function transformDeep(
     // Convert the key from UPPER snake_case to camelCase.
     const key = snakeCaseToCamelCase(k);
     // Check if this is a nested object.
+    // eslint-disable-next-line unicorn/prefer-ternary
     if (typeof value === 'object') {
       // Call the function recursively until we have processed all nested objects.
       config[key] = transformDeep(
@@ -119,5 +120,7 @@ export function transformDeep(
  * @returns The converted camelCase string.
  */
 export function snakeCaseToCamelCase(value: string): string {
-  return value.toLowerCase().replace(/(_[a-z])/g, (group) => group.toUpperCase().replace('_', ''));
+  return value
+    .toLowerCase()
+    .replaceAll(/(_[a-z])/g, (group) => group.toUpperCase().replace('_', ''));
 }

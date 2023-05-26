@@ -55,7 +55,7 @@ export class Uuid {
         for (let index = 0; index < length; index++) {
           if (netInterface[index].mac && netInterface[index].mac !== '00:00:00:00:00:00') {
             // Using Mac Address
-            address = Number(netInterface[index].mac.replace(/:|\D+/gi, ''));
+            address = Number(netInterface[index].mac.replaceAll(/:|\D+/gi, ''));
             break interfaceLoop;
           } else if (
             !netInterface[index].internal &&
@@ -119,7 +119,7 @@ export class Uuid {
         // tslint:disable no-bitwise
         return (
           uuid +
-          mask.replace(/x/g, (placeholder: string) => {
+          mask.replaceAll('x', (placeholder: string) => {
             const random = Math.trunc((date + Math.random() * 16) % 16);
             return (
               placeholder === 'x' ? random : /* istanbul ignore next */ (random & 0x3) | 0x8

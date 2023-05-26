@@ -23,10 +23,10 @@ export class GrpcHealthCheck {
   ): void {
     const service: string = call.request.service;
     const status: number = this.statusMap[service];
-    if (!status) {
-      callback(GrpcBoom.notFound(`Unknown service: ${service}`), undefined);
-    } else {
+    if (status) {
       callback(undefined, { status });
+    } else {
+      callback(GrpcBoom.notFound(`Unknown service: ${service}`), undefined);
     }
   }
 
@@ -44,7 +44,11 @@ export class GrpcHealthCheck {
       }
       // Add to the watch status map
       this.watchStatusMap[service] = updatedStatus;
-      if (!this.watchErrorMap[service]) {
+      if (this.watchErrorMap[service]) {
+        clearInterval(interval);
+        // Terminate the stream
+        call.end(this.watchErrorMap[service]);
+      } else {
         const lastStatus = this.statusMap[service] || -1;
         if (lastStatus !== updatedStatus) {
           // Status has changed
@@ -56,10 +60,6 @@ export class GrpcHealthCheck {
             }
           });
         }
-      } else {
-        clearInterval(interval);
-        // Terminate the stream
-        call.end(this.watchErrorMap[service]);
       }
     }, 1000);
   }

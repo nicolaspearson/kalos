@@ -46,7 +46,7 @@ describe('Typed Config Module Extended', () => {
           }),
           schema: Config,
         }),
-      ).toThrowError();
+      ).toThrow();
     });
   });
 });

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
 import { Format, TransformableInfo, format as logformFormat } from 'logform';
 import jsonStringify from 'safe-stable-stringify';
 import { MESSAGE } from 'triple-beam';
@@ -26,14 +27,15 @@ function attachError(error: Error): {
   message: string;
   name: string;
   stack: string[] | null;
-  cause?: Error | undefined;
+  cause?: Error | undefined | unknown;
 } {
+  console.log(error);
   const { stack, message, name } = error;
   return {
     ...error,
     message,
     name,
-    stack: !!stack ? stack.split('/n') : null,
+    stack: stack ? stack.split('/n') : null,
   };
 }
 
@@ -86,3 +88,4 @@ export function logstashFormatter(config: Config): Format {
     return info;
   })();
 }
+/* eslint-enable @typescript-eslint/no-unsafe-return */

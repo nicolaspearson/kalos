@@ -18,6 +18,16 @@ describe('Formatter', () => {
         [Symbol('message')]:
           '{"@fields":{"level":"error"},"@message":"error-test","@timestamp":"2021-05-18T19:32:31.495Z"}',
       };
+
+      console.log(
+        injectErrors().transform({
+          error: new Error('Simulated error'),
+          level: 'error',
+          message: 'error-test',
+          timestamp: '2021-05-18T19:32:31.495Z',
+        }),
+      );
+
       expect(
         injectErrors().transform({
           error: new Error('Simulated error'),
