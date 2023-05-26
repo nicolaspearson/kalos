@@ -1,9 +1,25 @@
 import { DotenvLoaderOptions, dotenvLoader } from 'nest-typed-config';
 
 export {
+  /* istanbul ignore next */
+  DirectoryLoaderOptions,
+  /* istanbul ignore next */
   FileLoaderOptions,
+  /* istanbul ignore next */
+  RemoteLoaderConfigType,
+  /* istanbul ignore next */
+  RemoteLoaderOptions,
+  /* istanbul ignore next */
+  SelectConfigOptions,
+  /* istanbul ignore next */
   TypedConfigModuleOptions,
+  /* istanbul ignore next */
+  directoryLoader,
+  /* istanbul ignore next */
   fileLoader,
+  /* istanbul ignore next */
+  remoteLoader,
+  /* istanbul ignore next */
   selectConfig,
 } from 'nest-typed-config';
 
