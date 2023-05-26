@@ -1,12 +1,14 @@
 import {
+  FileLoaderOptions,
   TypedConfigModuleExtended,
   dotenvLoaderExtended,
+  fileLoader,
   selectConfig,
   transformDeep,
 } from '../../src/index';
 import { Config } from '../example/config';
 
-describe('Dotenv Loader Extended', () => {
+describe('Nest Typed Config Extended', () => {
   describe('dotenvLoaderExtended', () => {
     const configModule = TypedConfigModuleExtended.forRoot({
       load: dotenvLoaderExtended({
@@ -19,13 +21,6 @@ describe('Dotenv Loader Extended', () => {
     });
 
     const config = selectConfig(configModule, Config);
-
-    const dotenvVariables = dotenvLoaderExtended({
-      ignoreEnvFile: true,
-      ignoreEnvVars: false,
-      separator: '__',
-      transformFromUpperSnakeCase: true,
-    })();
 
     test('should load the config without options', () => {
       const dotenvVariables = dotenvLoaderExtended()();
@@ -51,6 +46,13 @@ describe('Dotenv Loader Extended', () => {
     });
 
     test('should transform dotenv variables correctly', () => {
+      const dotenvVariables = dotenvLoaderExtended({
+        ignoreEnvFile: true,
+        ignoreEnvVars: false,
+        separator: '__',
+        transformFromUpperSnakeCase: true,
+      })();
+
       expect(dotenvVariables).toMatchObject({
         api: { host: 'localhost', port: '3000' },
         database: {
@@ -71,6 +73,13 @@ describe('Dotenv Loader Extended', () => {
     });
 
     test('config loaded via the typed config module should match dotenv variables', () => {
+      const dotenvVariables = dotenvLoaderExtended({
+        ignoreEnvFile: true,
+        ignoreEnvVars: false,
+        separator: '__',
+        transformFromUpperSnakeCase: true,
+      })();
+
       expect(dotenvVariables).toMatchObject({
         api: { host: config.api.host, port: String(config.api.port) },
         database: {
@@ -90,6 +99,44 @@ describe('Dotenv Loader Extended', () => {
           db: String(config.redis.db),
           host: config.redis.host,
           port: String(config.redis.port),
+        },
+      });
+    });
+  });
+
+  describe('fileLoader', () => {
+    const configModule = TypedConfigModuleExtended.forRoot({
+      load: fileLoader({
+        absolutePath: `${__dirname}/../example/.env.json`,
+      } as FileLoaderOptions),
+      schema: Config,
+    });
+
+    const config = selectConfig(configModule, Config);
+
+    test('should load the config correctly', () => {
+      expect(config).toMatchObject({
+        api: {
+          host: 'localhost',
+          port: 3000,
+        },
+        database: {
+          credentials: {
+            database: 'kalos',
+            host: 'localhost',
+            port: 5432,
+            password: 'secret',
+            username: 'admin',
+          },
+          type: 'postgres',
+        },
+        environment: 'development',
+        logLevel: 'debug',
+        nodeEnv: 'development',
+        redis: {
+          db: 0,
+          host: 'localhost',
+          port: 6379,
         },
       });
     });

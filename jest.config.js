@@ -13,18 +13,13 @@ module.exports = {
       statements: 100,
     },
   },
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.json',
-    },
-  },
   moduleFileExtensions: ['json', 'js', 'ts'],
   rootDir,
   roots: ['<rootDir>/src/', '<rootDir>/test/'],
   testEnvironment: 'node',
   testMatch: ['**/test/**/*.spec.ts'],
   transform: {
-    '^.+\\.ts$': require.resolve('ts-jest'),
+    '^.+\\.ts$': [require.resolve('ts-jest'), { tsconfig: '<rootDir>/tsconfig.json' }],
   },
   verbose: true,
 };
