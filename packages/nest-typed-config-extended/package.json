@@ -1,6 +1,6 @@
 {
   "name": "nest-typed-config-extended",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Extends the default dotenv-loader and module provided by nest-typed-config.",
   "license": "MIT",
   "main": "dist/index.js",
