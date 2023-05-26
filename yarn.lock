@@ -4294,7 +4294,7 @@ __metadata:
     typescript: 5.0.4
   peerDependencies:
     "@grpc/grpc-js": 1.8.14
-    "@grpc/proto-loader": 0.7.2
+    "@grpc/proto-loader": 0.7.7
   languageName: unknown
   linkType: soft
 
