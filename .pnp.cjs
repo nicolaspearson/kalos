@@ -5053,6 +5053,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/winston", null],\
             ["chalk", "npm:2.4.2"],\
             ["lodash", "npm:4.17.21"],\
+            ["logform", "npm:2.5.1"],\
             ["winston", "npm:3.8.2"]\
           ],\
           "packagePeers": [\
