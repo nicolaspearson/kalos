@@ -6,7 +6,7 @@
   "packageManager": "yarn@3.5.1",
   "engines": {
     "node": ">=v16.16.0",
-    "yarn": ">=3.2.2"
+    "yarn": ">=3.5.1"
   },
   "scripts": {
     "build": "yarn exec:foreach run build",
