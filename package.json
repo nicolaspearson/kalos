@@ -5,7 +5,7 @@
   "description": "This is a monorepo for various libraries.",
   "packageManager": "yarn@3.5.1",
   "engines": {
-    "node": ">=v16",
+    "node": ">=16.20.2",
     "yarn": ">=3.5.1"
   },
   "scripts": {
