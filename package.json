@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "description": "This is a monorepo for various libraries.",
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "yarn@3.8.6",
   "engines": {
     "node": ">=v16",
-    "yarn": ">=3.5.1"
+    "yarn": ">=3.8.6"
   },
   "scripts": {
     "build": "yarn exec:foreach run build",
