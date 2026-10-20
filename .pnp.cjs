@@ -885,6 +885,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@colors/colors", "npm:1.5.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.6.0", {\
+          "packageLocation": "./.yarn/cache/@colors-colors-npm-1.6.0-47f686c4e2-aa209963e0.zip/node_modules/@colors/colors/",\
+          "packageDependencies": [\
+            ["@colors/colors", "npm:1.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.6.1", {\
+          "packageLocation": "./.yarn/cache/@colors-colors-npm-1.6.1-826cfa75ea-fa1d9ff742.zip/node_modules/@colors/colors/",\
+          "packageDependencies": [\
+            ["@colors/colors", "npm:1.6.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@commitlint/cli", [\
@@ -1113,11 +1127,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dabh/diagnostics", [\
-        ["npm:2.0.3", {\
-          "packageLocation": "./.yarn/cache/@dabh-diagnostics-npm-2.0.3-0f2cd64f24-4879600c55.zip/node_modules/@dabh/diagnostics/",\
+        ["npm:2.0.9", {\
+          "packageLocation": "./.yarn/cache/@dabh-diagnostics-npm-2.0.9-025b0f9435-9e75649ebd.zip/node_modules/@dabh/diagnostics/",\
           "packageDependencies": [\
-            ["@dabh/diagnostics", "npm:2.0.3"],\
-            ["colorspace", "npm:1.1.4"],\
+            ["@dabh/diagnostics", "npm:2.0.9"],\
+            ["@so-ric/colorspace", "npm:1.1.6"],\
             ["enabled", "npm:2.0.0"],\
             ["kuler", "npm:2.0.0"]\
           ],\
@@ -1913,6 +1927,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@sinonjs/fake-timers", "npm:10.2.0"],\
             ["@sinonjs/commons", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@so-ric/colorspace", [\
+        ["npm:1.1.6", {\
+          "packageLocation": "./.yarn/cache/@so-ric-colorspace-npm-1.1.6-4fa5d728ca-893abfe47f.zip/node_modules/@so-ric/colorspace/",\
+          "packageDependencies": [\
+            ["@so-ric/colorspace", "npm:1.1.6"],\
+            ["color", "npm:5.0.3"],\
+            ["text-hex", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3564,12 +3589,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["color", [\
-        ["npm:3.2.1", {\
-          "packageLocation": "./.yarn/cache/color-npm-3.2.1-568cf1014f-f81220e8b7.zip/node_modules/color/",\
+        ["npm:5.0.3", {\
+          "packageLocation": "./.yarn/cache/color-npm-5.0.3-2279f16622-2ad337a520.zip/node_modules/color/",\
           "packageDependencies": [\
-            ["color", "npm:3.2.1"],\
-            ["color-convert", "npm:1.9.3"],\
-            ["color-string", "npm:1.9.1"]\
+            ["color", "npm:5.0.3"],\
+            ["color-convert", "npm:3.1.3"],\
+            ["color-string", "npm:2.1.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3590,6 +3615,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["color-name", "npm:1.1.4"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.1.3", {\
+          "packageLocation": "./.yarn/cache/color-convert-npm-3.1.3-4ccfd70ef2-5133952b53.zip/node_modules/color-convert/",\
+          "packageDependencies": [\
+            ["color-convert", "npm:3.1.3"],\
+            ["color-name", "npm:2.1.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["color-name", [\
@@ -3606,15 +3639,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["color-name", "npm:1.1.4"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.1.1", {\
+          "packageLocation": "./.yarn/cache/color-name-npm-2.1.1-7272c0e973-17bbb03a1e.zip/node_modules/color-name/",\
+          "packageDependencies": [\
+            ["color-name", "npm:2.1.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["color-string", [\
-        ["npm:1.9.1", {\
-          "packageLocation": "./.yarn/cache/color-string-npm-1.9.1-dc020e56be-c13fe7cff7.zip/node_modules/color-string/",\
+        ["npm:2.1.4", {\
+          "packageLocation": "./.yarn/cache/color-string-npm-2.1.4-e5adac6a35-f9caa29d52.zip/node_modules/color-string/",\
           "packageDependencies": [\
-            ["color-string", "npm:1.9.1"],\
-            ["color-name", "npm:1.1.4"],\
-            ["simple-swizzle", "npm:0.2.2"]\
+            ["color-string", "npm:2.1.4"],\
+            ["color-name", "npm:2.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3633,17 +3672,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/colorette-npm-2.0.20-692d428726-0c016fea2b.zip/node_modules/colorette/",\
           "packageDependencies": [\
             ["colorette", "npm:2.0.20"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["colorspace", [\
-        ["npm:1.1.4", {\
-          "packageLocation": "./.yarn/cache/colorspace-npm-1.1.4-f01655548a-bb3934ef3c.zip/node_modules/colorspace/",\
-          "packageDependencies": [\
-            ["colorspace", "npm:1.1.4"],\
-            ["color", "npm:3.2.1"],\
-            ["text-hex", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5006,7 +5034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"],\
             ["uuid", "npm:9.0.0"],\
             ["validator", "npm:13.9.0"],\
-            ["winston", "npm:3.8.2"],\
+            ["winston", "npm:3.19.0"],\
             ["winston-transport", "npm:4.5.0"]\
           ],\
           "linkType": "SOFT"\
@@ -5141,7 +5169,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chalk", "npm:2.4.2"],\
             ["lodash", "npm:4.17.21"],\
             ["logform", "npm:2.5.1"],\
-            ["winston", "npm:3.8.2"]\
+            ["winston", "npm:3.19.0"]\
           ],\
           "packagePeers": [\
             "@types/winston",\
@@ -6168,13 +6196,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-arrayish-npm-0.2.1-23927dfb15-eef4417e3c.zip/node_modules/is-arrayish/",\
           "packageDependencies": [\
             ["is-arrayish", "npm:0.2.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:0.3.2", {\
-          "packageLocation": "./.yarn/cache/is-arrayish-npm-0.3.2-f856180f79-977e64f54d.zip/node_modules/is-arrayish/",\
-          "packageDependencies": [\
-            ["is-arrayish", "npm:0.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7579,6 +7600,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["logform", "npm:2.5.1"],\
             ["@colors/colors", "npm:1.5.0"],\
+            ["@types/triple-beam", "npm:1.3.2"],\
+            ["fecha", "npm:4.2.3"],\
+            ["ms", "npm:2.1.3"],\
+            ["safe-stable-stringify", "npm:2.4.3"],\
+            ["triple-beam", "npm:1.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.7.0", {\
+          "packageLocation": "./.yarn/cache/logform-npm-2.7.0-7a34a0bd17-a202d10897.zip/node_modules/logform/",\
+          "packageDependencies": [\
+            ["logform", "npm:2.7.0"],\
+            ["@colors/colors", "npm:1.6.0"],\
             ["@types/triple-beam", "npm:1.3.2"],\
             ["fecha", "npm:4.2.3"],\
             ["ms", "npm:2.1.3"],\
@@ -9358,16 +9392,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["simple-swizzle", [\
-        ["npm:0.2.2", {\
-          "packageLocation": "./.yarn/cache/simple-swizzle-npm-0.2.2-8dee37fad1-a7f3f2ab5c.zip/node_modules/simple-swizzle/",\
-          "packageDependencies": [\
-            ["simple-swizzle", "npm:0.2.2"],\
-            ["is-arrayish", "npm:0.3.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["sisteransi", [\
         ["npm:1.0.5", {\
           "packageLocation": "./.yarn/cache/sisteransi-npm-1.0.5-af60cc0cfa-aba6438f46.zip/node_modules/sisteransi/",\
@@ -10428,21 +10452,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["winston", [\
-        ["npm:3.8.2", {\
-          "packageLocation": "./.yarn/cache/winston-npm-3.8.2-2035e9cac4-f7b901798b.zip/node_modules/winston/",\
+        ["npm:3.19.0", {\
+          "packageLocation": "./.yarn/cache/winston-npm-3.19.0-186e261f8d-7a02885dcc.zip/node_modules/winston/",\
           "packageDependencies": [\
-            ["winston", "npm:3.8.2"],\
-            ["@colors/colors", "npm:1.5.0"],\
-            ["@dabh/diagnostics", "npm:2.0.3"],\
+            ["winston", "npm:3.19.0"],\
+            ["@colors/colors", "npm:1.6.1"],\
+            ["@dabh/diagnostics", "npm:2.0.9"],\
             ["async", "npm:3.2.4"],\
             ["is-stream", "npm:2.0.1"],\
-            ["logform", "npm:2.5.1"],\
+            ["logform", "npm:2.7.0"],\
             ["one-time", "npm:1.0.0"],\
             ["readable-stream", "npm:3.6.2"],\
             ["safe-stable-stringify", "npm:2.4.3"],\
             ["stack-trace", "npm:0.0.10"],\
             ["triple-beam", "npm:1.3.0"],\
-            ["winston-transport", "npm:4.5.0"]\
+            ["winston-transport", "npm:4.9.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10453,6 +10477,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["winston-transport", "npm:4.5.0"],\
             ["logform", "npm:2.5.1"],\
+            ["readable-stream", "npm:3.6.2"],\
+            ["triple-beam", "npm:1.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.9.0", {\
+          "packageLocation": "./.yarn/cache/winston-transport-npm-4.9.0-ae8fd25ccc-f5fd06a27d.zip/node_modules/winston-transport/",\
+          "packageDependencies": [\
+            ["winston-transport", "npm:4.9.0"],\
+            ["logform", "npm:2.7.0"],\
             ["readable-stream", "npm:3.6.2"],\
             ["triple-beam", "npm:1.3.0"]\
           ],\
