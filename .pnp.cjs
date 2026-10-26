@@ -62,7 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:17.6.5"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["@types/prettier", "npm:2.7.3"],\
             ["@types/validator", "npm:13.7.17"],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.59.8"],\
@@ -2184,10 +2184,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:18.16.15", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.16.15-3f1564725f-65bc0fd036.zip/node_modules/@types/node/",\
+        ["npm:18.19.130", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.19.130-df6d3a4ff9-b703236358.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.16.15"]\
+            ["@types/node", "npm:18.19.130"],\
+            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -4986,7 +4987,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/common-tags", "npm:1.8.1"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["@types/triple-beam", "npm:1.3.2"],\
             ["@types/uuid", "npm:9.0.1"],\
             ["@types/validator", "npm:13.7.17"],\
@@ -5758,7 +5759,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["grpc-boom", "workspace:packages/grpc-boom"],\
             ["@grpc/grpc-js", "npm:1.8.14"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:29.5.0"],\
             ["kalos", "workspace:."],\
             ["protobufjs", "npm:7.2.3"],\
@@ -5777,7 +5778,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@grpc/proto-loader", "npm:0.7.7"],\
             ["@types/google-protobuf", "npm:3.15.6"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["google-protobuf", "npm:3.21.2"],\
             ["grpc-boom", "link:../grpc-boom/src::locator=grpc-ts-health-check%40workspace%3Apackages%2Fgrpc-ts-health-check"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:29.5.0"],\
@@ -5886,7 +5887,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["heart-ping", "workspace:packages/heart-ping"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:29.5.0"],\
             ["kalos", "workspace:."],\
             ["rimraf", "npm:5.0.1"],\
@@ -7240,7 +7241,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@commitlint/config-conventional", "npm:17.6.5"],\
             ["@types/express", "npm:4.17.17"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["@types/prettier", "npm:2.7.3"],\
             ["@types/validator", "npm:13.7.17"],\
             ["@typescript-eslint/eslint-plugin", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:5.59.8"],\
@@ -8164,7 +8165,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nest-typed-config-extended", "workspace:packages/nest-typed-config-extended"],\
             ["@nestjs/common", "virtual:e67c9dbfa7623e7c11f78a3b3ab2476db63afbf7bd7eec51434268a428fd304410ce5b9bb3dd8a7c30d2c6e6ee8508b956c5e14e71a8d7d14b8e2db80223c58b#npm:9.4.2"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:29.5.0"],\
@@ -8219,7 +8220,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["node-ts-uuid", "workspace:packages/node-ts-uuid"],\
             ["@types/jest", "npm:29.5.2"],\
-            ["@types/node", "npm:18.16.15"],\
+            ["@types/node", "npm:18.19.130"],\
             ["jest", "virtual:7c2326a071ac85dfef8db5556b920940ed908bad31c6c5cdb2d2256c09ce3caf6f5010323256f5f40c30eb78762940f5d3235ae13e1484e3b5d0ee6ec9421a31#npm:29.5.0"],\
             ["kalos", "workspace:."],\
             ["rimraf", "npm:5.0.1"],\
@@ -10206,6 +10207,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["has-bigints", "npm:1.0.2"],\
             ["has-symbols", "npm:1.0.3"],\
             ["which-boxed-primitive", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["undici-types", [\
+        ["npm:5.26.5", {\
+          "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-3192ef6f3f.zip/node_modules/undici-types/",\
+          "packageDependencies": [\
+            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }]\
